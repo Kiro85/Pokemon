@@ -112,7 +112,8 @@ Hemos adaptado la página para todas las resoluciones superiores a un ancho de 3
 ## <span style="color:blue;"> 6- Distribución de tareas.</span>
 | **Responsable** | **Tarea**                                                                                 | **Duración** |
 |------------------|-------------------------------------------------------------------------------------------|--------------|
-| **Cristian**     | Estructura base de todo el CSS y HTML que se usarán en las demás páginas (Colores, forma de la página, secciones). | 3h       |
+| **Cristian**     | Estructura base de todo el CSS y HTML que se usarán en las demás páginas 
+                    (Colores, forma de la página, secciones).                                                  | 3h           |
 |                  | Búsqueda de imágenes y contenido de la página (sobres).                                   | 1h           |
 |                  | Ordenar, limpiar y revisar código, añadir decoración al index.html.                       | 3h           |
 |                  | Crear el footer y hacer la página index responsive.                                       | 2h           |
@@ -121,7 +122,7 @@ Hemos adaptado la página para todas las resoluciones superiores a un ancho de 3
 |                  | Buscar imágenes y optimizar CSS.                                                          | 2h           |
 |                  | CSS Tabla.                                                                                | 1h           |
 |                  | Correccion de errores.                                                                    | 1h           |
-|                  | CSS de la pagina web Formularios + validaciones.                                                                    | 2h           |
+|                  | CSS de la pagina web Formularios + validaciones.                                          | 2h           |
 
 | **Responsable**  | **Tarea**                                                                                 | **Duración** |
 |------------------|-------------------------------------------------------------------------------------------|--------------|
@@ -132,8 +133,8 @@ Hemos adaptado la página para todas las resoluciones superiores a un ancho de 3
 |                  | Generar el texto de la página web info.                                                   | 30m          |
 |                  | Crear las páginas web (info).                                                             | 1h           |
 |                  | Creación del MARKDOWN.                                                                    | 2h           |
-|                  | Creacion Pagina web(Formularios, sin las validaciones).                                                                    | 2h           |
-|                  | Modificación del README(Explicaciones de las expresiones, Imagenes,etc..).                                                                    | 1h           |
+|                  | Creacion Pagina web(Formularios, sin las validaciones).                                   | 2h           |
+|                  | Modificación del README(Explicaciones de las expresiones, Imagenes,etc..).                | 1h           |
 
 | **Responsables** | **Tarea**                                                                                 | **Duración** |
 |------------------|-------------------------------------------------------------------------------------------|--------------|
