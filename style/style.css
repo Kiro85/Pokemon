@@ -28,12 +28,24 @@ header {
 
 /* Imagen de portada */
 
-.banner {
+#banner_index {
     display: flex;
     justify-content: center;
     background: 
         linear-gradient(to bottom, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 1) 100%), 
-        url('../media/Pokemon-TCG-Pocket-Banner-scaled.webp');
+        url('../media/banner_index.webp');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+#banner_sobres {
+    display: flex;
+    justify-content: center;
+    background: 
+        linear-gradient(to bottom, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 1) 100%), 
+        url('../media/banner_sobres.webp');
     background-size: cover;
     background-position: center;
     height: 100%;
@@ -95,7 +107,6 @@ main h1 {
     align-items: center;
     flex-direction: column;
     width: 80%;
-    border-radius: 100px;
     height: 400px;
 }
 
