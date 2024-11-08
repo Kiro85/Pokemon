@@ -2,6 +2,10 @@
     font-family: pokemon;
     src: url('../fonts/Pokemon\ Solid.ttf');
 }
+@font-face {
+    font-family: pokemonGB;
+    src: url('../fonts/Pokemon_GB.ttf');
+}
 
 * {
     margin: 0;
@@ -33,19 +37,7 @@ header {
     justify-content: center;
     background: 
         linear-gradient(to bottom, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 1) 100%), 
-        url('../media/banner_index.webp');
-    background-size: cover;
-    background-position: center;
-    height: 100%;
-    width: 100%;
-}
-
-#banner_sobres {
-    display: flex;
-    justify-content: center;
-    background: 
-        linear-gradient(to bottom, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 1) 100%), 
-        url('../media/banner_sobres.webp');
+        url('../media/Pokemon-TCG-Pocket-Banner-scaled.webp');
     background-size: cover;
     background-position: center;
     height: 100%;
@@ -107,6 +99,7 @@ main h1 {
     align-items: center;
     flex-direction: column;
     width: 80%;
+    border-radius: 100px;
     height: 400px;
 }
 
@@ -116,10 +109,8 @@ main h1 {
     width: 80%;
     height: 80%;
     display: flex;
-    border: solid black;
-    border-radius: 100px;
     margin-bottom: 30px;
-    overflow: hidden;
+    
 }
 
 /*Texo de información*/
@@ -127,7 +118,14 @@ main h1 {
 .info_texto {
     width: 70%;
     height: 100%;
-    border: solid black;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-size: large;
+
+}
+.info_texto p {
+    font-family: pokemonGB;
 }
 
 /*Imagen de información*/
