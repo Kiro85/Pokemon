@@ -196,5 +196,22 @@ main > h1 {
     }
 }
 
+/*Pagina de sobres*/
 
+.sobres {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sobres_cartas {
+        display: grid;
+        width: 100vw;
+        grid-template-columns: repeat(
+            auto-fill,
+            minmax(300px, 1fr)
+        );
+        gap: 32px 16px;
+}
 
