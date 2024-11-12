@@ -1,8 +1,9 @@
-# B2-Pr-ctica
+# Pokémon
 
 Cristian:
-- Esqueleto de la web (HTML y CSS) 3h
+- Esqueleto de la web (HTML y CSS) 3h  
 - busqueda de imagenes y contenido de la pagina (sobres). 30m
+- Ordenar, limpiar y revisar código y añadir decoración al index.html 2h
 
 Sven:
 - buscar informacion para el Contenido del body 2h
