@@ -134,8 +134,8 @@ main > h1 {
 
     &:hover {
         transform: scale(1.02);
-        box-shadow: 0 0 15px 5px rgba(255, 223, 0, 0.8); /* Efecto de brillo en el borde */
-        border-color: gold; /* Cambia el color del borde para que resalte */
+        box-shadow: 10px 10px 20px rgba(255, 223, 0, 0.8);
+        border-color: gold;
     }
 
     section {
@@ -172,11 +172,6 @@ main > h1 {
         font-family: pokemonGB;
     }
     
-    /* .info_img {
-        width: 30%;
-        height: 100%;
-    } */
-    
     /* Imágenes laterales */
     
     .pokeballsup {
@@ -199,16 +194,34 @@ main > h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 80%;
+    max-width: 1200px;
+    margin-top: 80px;
+    gap: 30px 0;
+}
+
+.sobres img {
+    max-width: 80%;
 }
 
 .sobres_cartas {
-        display: grid;
-        width: 100vw;
-        grid-template-columns: repeat(
-            auto-fill,
-            minmax(300px, 1fr)
-        );
-        gap: 32px 16px;
+    display: grid;
+    gap: 10px;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    justify-items: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #333, #722fc5);
+    border: #ecd5ed solid 4px;
+    box-shadow: 10px 10px 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; 
+
+    &:hover {
+        transform: scale(1.02);
+        box-shadow: 10px 10px 20px rgba(162, 0, 255, 0.8);
+        border-color: rgba(162, 0, 255, 0.8);
+    }
 }
 
 /*Footer de las páginas*/
@@ -262,12 +275,29 @@ footer {
     }
   }
 
+/*Adaptabilidad para la resolución de móbil*/
+
 @media screen and (width < 900px) {
     .pokeballsup, .pokeballinf {
         display: none;
     }
 
+    .info:hover {
+        transform: none;
+        box-shadow: 10px 10px 20px;
+        border-color: goldenrod;
+    }
+
     .info section {
         flex-direction: column;
+    }
+
+    .sobres_cartas {
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .sobres > img {
+        max-width: 40%;
     }
 }
