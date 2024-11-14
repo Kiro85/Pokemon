@@ -226,6 +226,8 @@ main > h1 {
     max-width: 1200px;
     margin-top: 80px;
     gap: 30px 0;
+    background-image: url(../media/efecto.gif);
+    background-size: cover;
 }
 
 .sobres img {
