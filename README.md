@@ -8,6 +8,7 @@ Cristian:
 - Empezar la estructura de la página de sobres 1h
 - Acabar la estructura de la página de sobres 2h
 - Buscar imagenes y optimizar css 2h
+- Colocar y optimizar imagenes, hacer algunas secciones responsive, reorganizar todo el css y crear la tabla 3h
 
 Sven:
 - buscar informacion para el Contenido del body 2h
