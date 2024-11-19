@@ -345,13 +345,7 @@ table {
 }
 
 
-
-  
-  
-  
-  
-
-/*Footer de las páginas*/
+/* Footer de las páginas */
 
 footer {
     display: flex;
@@ -405,6 +399,10 @@ footer {
 /*Adaptabilidad para la resolución de móbil*/
 
 @media screen and (width < 900px) {
+    nav {
+        width: 90%;
+    }
+
     .pokeballsup, .pokeballinf {
         display: none;
     }
@@ -437,6 +435,10 @@ footer {
 
         img {
             width: 100px;
+        }
+
+        &:hover {
+            transform: scale(1);
         }
     }
 }
