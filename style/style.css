@@ -399,8 +399,20 @@ footer {
 /*Adaptabilidad para la resolución de móbil*/
 
 @media screen and (width < 900px) {
+    header {
+        display: none;
+    }
+
     nav {
-        width: 90%;
+        width: 100%;
+        height: 70px;
+        border-radius: 0;
+        position: sticky;
+
+        ul a{
+            padding: 0 20px;
+            height: 100%;
+        }
     }
 
     .pokeballsup, .pokeballinf {
@@ -409,12 +421,6 @@ footer {
 
     .pokeball {
         display: none;
-    }
-
-    .info:hover {
-        transform: none;
-        box-shadow: 10px 10px 20px;
-        border-color: goldenrod;
     }
 
     .info section {
