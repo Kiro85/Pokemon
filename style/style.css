@@ -199,6 +199,10 @@ main {
         margin-bottom: 30px;
         padding: 2%;
 
+        img {
+            width: 250px;
+        }
+
         .info_texto {
             width: 80%;
             text-align: center;

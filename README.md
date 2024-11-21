@@ -39,10 +39,15 @@ Se ha utilizado la versión **CSS3**.
 
 ![alt text](media/readme/Captura-PC2.PNG)
 
+![alt text](media/readme/Captura-PC3.PNG)
+
 ## Captura del mobíl 
 ![alt text](media/readme/Captura-Mobil.PNG)
 
 ![alt text](media/readme/Captura-Mobil2.PNG)
+
+![alt text](media/readme/Captura-mobil3.png)
+
 
 # Repartimiento de tareas.
 
