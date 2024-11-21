@@ -1,9 +1,9 @@
 # Pokémon-main
 ## Documentación:
-La estructura de la página es la siguiente:
+## 1- La estructura de la página es la siguiente:
 
-### / Pokemon-main(carpeta de toda la página web):
-- **/fonts.**
+** / Pokemon-main(carpeta de toda la página web): **
+**/fonts.**
     - **pokemon Solid.ttf** (Tipo de letra de los títulos).
     - **Pokemon_GB.ttf** (Tipo de letra que pertenece al texto general).
 - **/media.**  (Contiene todas las imágenes de la página web).
@@ -17,7 +17,7 @@ La estructura de la página es la siguiente:
 - **/style.** (Contiene la hoja de CSS).
     - **style.css**
 
-## Tecnologías utilizadas.
+## 2- Tecnologías utilizadas.
 
 ### Versión HTML.
 Se ha utilizado la versión **HTML5**.

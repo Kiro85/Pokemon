@@ -91,7 +91,7 @@ nav {
     min-width: 40%;
     position: sticky;
     top: 5px;
-    z-index: 2;
+    z-index: 3;
     position: relative;
 
     ul {
