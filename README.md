@@ -50,26 +50,26 @@ Hemos adaptado la página para todas las resoluciones superiores a un ancho de 3
  ##### Algunos ejemplo de la versión de escritorio:
 
  ##### Barra de navegación: 
- ![Captura de pc 1](media/readme/Captura-PC.PNG)
+ ![Captura de pc 1](./media/readme/Captura-PC.PNG)
 
  ##### Secciones:
- ![Captura de pc 2](media/readme/Captura-PC2.PNG)
+ ![Captura de pc 2](./media/readme/Captura-PC2.PNG)
 
 
  ##### Sobres:
- ![Captura de pc 3](media/readme/Captura-PC3.PNG)
+ ![Captura de pc 3](./media/readme/Captura-PC3.png)
  
 
  ##### Algunos ejemplos de la versión móbil:
  
  ##### Barra de navegación:
- ![Captura de mobil 1](media/readme/Captura-Mobil.PNG)
+ ![Captura de mobil 1](./media/readme/Captura-Mobil.PNG)
 
  ##### Secciones: 
- ![Captura de mobil 2](media/readme/Captura-Mobil2.PNG)
+ ![Captura de mobil 2](./media/readme/Captura-Mobil2.PNG)
 
  ##### Sobres:
- ![Captura de mobil 3](media/readme/Captura-mobil3.png)
+ ![Captura de mobil 3](./media/readme/Captura-Mobil3.png)
 
 ## <span style="color:blue;"> 4- Distribución de tareas.</span>
 | **Responsable** | **Tarea**                                                                                 | **Duración** |
