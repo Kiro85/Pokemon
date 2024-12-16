@@ -80,6 +80,18 @@ header {
     width: 100%;
 }
 
+#banner_formulario {
+    display: flex;
+    justify-content: center;
+    background: 
+        linear-gradient(to bottom, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 1) 100%), 
+        url('../media/banner_formulario.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
 /* Barra de navegación */
 
 nav {
@@ -348,6 +360,107 @@ table {
         }
 }
 
+/*Form de las páginas de formúlario*/
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9; 
+    border: 4px solid goldenrod;
+    border-radius: 30px;
+    box-shadow: 10px 10px 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; 
+    
+    &:hover { 
+        transform: scale(1.02); 
+        box-shadow: 10px 10px 20px rgba(255, 223, 0, 0.8); 
+        border-color: gold; 
+    }
+
+    fieldset {
+        width: 100%;
+        border: 2px solid gold;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        background-color: #f9f9f9;
+
+        legend {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: black;
+            padding: 0 10px;
+            border-bottom: 2px solid gold;
+        }
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 0.9em;
+        color: #555;
+    }
+
+    label.suscrito {
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+
+    input[type="text"], input[type="textarea"], input[type="email"], select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid goldenrod;
+    border-radius: 5px;
+    font-size: 0.9em;
+    box-sizing: border-box;
+    }
+
+    input[type="tel"] {
+        width: 50%;
+        padding: 5px 10px;
+        margin-bottom: 15px;
+        border: 1px solid goldenrod;
+        border-radius: 5px;
+        font-size: 0.9em;
+        box-sizing: border-box;
+    }
+
+    input[type="checkbox"] {
+        margin-right: 10px;
+    }
+
+    button {
+        padding: 10px 15px;
+        font-size: 1em;
+        color: #fff;
+        background-color: gold;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-right: 10px;
+    }
+
+    button:hover {
+    background-color: goldenrod;
+    }
+
+    /* Heredamos el estilo del botón normal y solo cambiamos el color */
+    button[type="reset"] {
+        background-color: #dc3545;
+    }
+
+    button[type="reset"]:hover {
+        background-color: #a71d2a;
+    }
+}
+
 
 /* Footer de las páginas */
 
@@ -400,6 +513,7 @@ footer {
     }
   }
 
+
 /*Adaptabilidad para la resolución de móbil*/
 
 @media screen and (width < 900px) {
@@ -449,6 +563,44 @@ footer {
 
         &:hover {
             transform: scale(1);
+        }
+    }
+
+    /* Formularios */
+
+    form {
+        border: none;
+        box-shadow: none;
+        transition: none;
+
+        &:hover {
+            transform: none;
+            box-shadow: none;
+            border-color: none;
+        }
+
+        fieldset {
+            border: none;
+        }
+
+        label {
+            margin-top: 20px;
+        }
+
+        input[type="text"], input[type="textarea"], input[type="email"], select {
+           margin-bottom: 30px;
+        }
+
+        input[type="tel"] {
+            margin-bottom: 30px;
+        }
+
+        input[type="tel"] {
+            margin-bottom: 30px;
+        }
+
+        button {
+            margin-top: 20px;
         }
     }
 }

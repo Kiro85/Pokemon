@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Pokémon TCGP, cartas, nintendo, juego, cartas"/>
+    <meta name="author" content="Cristian Pérez Juárez, Sven Lee Jansen Gorreta" />
+    <meta name="description" content="Página web basada en el juego de pokémon TCGP (porfa nintendo no nos denuncies)"/>
+    <title>Pokémon TCGP</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body class="form">
+    <header>
+        <!--Imagen de portada-->
+        <section id="banner_formulario"></section>
+    </header>
+
+    <main class="form">
+        <!--Barra de navegación-->
+        <nav>
+            <ul>
+                <a href="../index.html"><li><p>Index</p></li></a>
+                <a href="../pages/sobres.html"><li><p>Sobres</p></li></a>
+                <a href="../pages/detalles.html"><li><p>Detalles</p></li></a>
+                <a href="../pages/info.html"><li><p>Info</p></li></a>
+                <!--Imagen de los lados-->
+                <img src="../media/pokeball.png" class="pokeball p_izq" alt="pokeball">
+                <img src="../media/pokeball.png" class="pokeball p_der" alt="pokeball">
+            </ul>
+        </nav>
+
+        <!-- Formulario de datos de Usuario -->
+        <form action="" method="post">
+            <fieldset>
+                <legend>Datos del usuario</legend>
+        
+                <label for="usuarioNombre">*Nombre del usuario:</label>
+                <input type="text" name="nombre" id="usuarioNombre" pattern="^[\w.-]+@[a-zA-Z\d.-]+\.[a-zA-Z]{2,}$" required>
+        
+                <label for="usuarioMail">*Dirección de correo:</label>
+                <input type="email" name="email" id="usuarioMail" pattern="^\d{10}$" required>
+
+                <label for="telefono">Número de teléfono:</label>
+                <input type="tel" name="telefono" id="usarioTel">
+            </fieldset>
+            <fieldset>
+                <legend>Mensaje del usuario</legend>
+        
+                <label for="usuarioMensaje">Mensaje: </label>
+                <input type="textarea" name="mensaje" id="usuarioMensaje">
+        
+                <button type="submit">Enviar</button>
+                <button type="reset">Borrar Formulario</button>
+            </fieldset>
+        </form>
+        
+        <!-- Formulario sobre lo que crees que ha sido más interesante -->
+        <form action="" method="get">
+            <fieldset>
+                <legend>Opinión sobre el contenido</legend>
+        
+                <label class="suscrito" for="suscrito">*¿Estás suscrito a esta página web?</label>
+                <input type="checkbox" name="suscrito" id="usuarioSuscrito" required>
+        
+                <label for="motivos">*¿Qué te ha parecido más interesante? </label>
+                <select name="motivos" id="motivos" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="interes_cartas">Las cartas</option>
+                    <option value="interes_desarrollo">El desarrollo</option>
+                    <option value="interes_sobres">Los sobres</option>
+                </select>
+        
+                <button type="submit">Enviar</button>
+                <button type="reset">Borrar Formulario</button>
+            </fieldset>
+        </form>
+
+        
+        <!--Texto de agradecimiento-->
+        <h1>Gracias Por la ayuda!</h1>
+    </main>
+
+    <footer>
+        <h1>Desarrollado por:</h1>
+        <ul>
+            <li>
+                <a href="https://github.com/kiro85" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Icon"> Cristian Pérez Juárez
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/SvenLee-J" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Icon"> Sven Lee Jansen Gorreta
+                </a>
+            </li>
+        </ul>
+    </footer>
+</body>
+</html>
