@@ -260,90 +260,120 @@ main {
 
 /*CSS común para todos los apartados*/
 
-.sobres {
+.contenedorSobres {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 80%;
-    max-width: 1200px;
-    margin-top: 80px;
-    gap: 30px 0;
 
-    .sobres_cartas {
+    .sobres {
         display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 100%;
-        padding: 20px;
-        box-shadow: 10px 10px 20px;
-        transition: transform 0.3s ease; 
+        width: 80%;
+        max-width: 1200px;
+        margin-top: 80px;
+        gap: 30px 0;
     
-        &:hover {
-            transform: scale(1.02);
+        .sobres_cartas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 20px;
+            box-shadow: 10px 10px 20px;
+            transition: transform 0.3s ease; 
+        
+            &:hover {
+                transform: scale(1.02);
+            }
+        
+            img {
+                width: 200px;
+                flex: 0 1 auto;
+                max-width: 200px;
+            }
+        }
+
+        /*CSS individual para cada apartado*/
+
+        .selectorSobres {
+            background: linear-gradient(135deg, #fa4710, #43fd14);
+            border: #ecd5ed solid 4px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; 
+            
+            &:hover {
+                box-shadow: 10px 10px 20px #43fd14;
+                border-color: #43fd14;
+            }
+        }
+
+        .sobre_mewtwo {
+            display: none;
+
+            background: linear-gradient(135deg, #333, #722fc5);
+            border: #ecd5ed solid 4px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; 
+            
+            &:hover {
+                box-shadow: 10px 10px 20px rgba(162, 0, 255, 0.8);
+                border-color: rgba(162, 0, 255, 0.8);
+            }
+        }
+
+        .sobre_charizard {
+            display: none;
+
+            background: linear-gradient(135deg, #333, #ce2d00);
+            border: #f0a43c solid 4px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; 
+            
+            &:hover {
+                box-shadow: 10px 10px 20px rgba(255, 60, 1, 0.8);
+                border-color: rgba(255, 60, 1, 0.8);
+            }
+        }
+
+        .sobre_pikachu {
+            display: none;
+
+            background: linear-gradient(135deg, #333, #f9d717);
+            border: #f4e952 solid 4px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; 
+            
+            &:hover {
+                box-shadow: 10px 10px 20px rgba(249, 253, 0, 0.8);
+                border-color: rgba(249, 253, 0, 0.8);
+            }
+        }
+
+        /* Clase para activar el active de los sobres con JS */
+        .sobreActive {
+            display: flex;
+        }
+        
+        /* Clase para el zoom de las cartas con JS */
+        .zoomFondo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 5;
         }
     
-        img {
-            width: 200px;
-            flex: 0 1 auto;
-            max-width: 200px;
+        .zoomCarta {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-    }
-    
-    .zoomFondo {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: rgba(0, 0, 0, 0.8);
-        z-index: 5;
-    }
-
-    .zoomCarta {
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-}
-
-/*CSS individual para cada apartado*/
-
-.sobre_mewtwo {
-    background: linear-gradient(135deg, #333, #722fc5);
-    border: #ecd5ed solid 4px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; 
-    
-    &:hover {
-        box-shadow: 10px 10px 20px rgba(162, 0, 255, 0.8);
-        border-color: rgba(162, 0, 255, 0.8);
-    }
-}
-
-.sobre_charizard {
-    background: linear-gradient(135deg, #333, #ce2d00);
-    border: #f0a43c solid 4px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; 
-    
-    &:hover {
-        box-shadow: 10px 10px 20px rgba(255, 60, 1, 0.8);
-        border-color: rgba(255, 60, 1, 0.8);
-    }
-}
-
-.sobre_pikachu {
-    background: linear-gradient(135deg, #333, #f9d717);
-    border: #f4e952 solid 4px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; 
-    
-    &:hover {
-        box-shadow: 10px 10px 20px rgba(249, 253, 0, 0.8);
-        border-color: rgba(249, 253, 0, 0.8);
-    }
+    }    
 }
 
 /* Página de detalles */
@@ -562,18 +592,16 @@ footer {
         flex-direction: column;
     }
 
-    .sobres_cartas {
+    .sobres_cartas, .selectorSobres {
         gap: 8px;
         padding: 10px;
     }
 
-    .sobres > img {
+    .sobres > img, .selectorSobres > img {
         max-width: 40%;
     }
 
-    .sobres_cartas {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-
+    .sobres_cartas, .selectorSobres {
         img {
             width: 100px;
         }
