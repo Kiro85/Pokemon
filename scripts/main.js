@@ -1,3 +1,52 @@
+// Objeto con toda la información de las cartas
+const dataCartasMewtwo = [
+    {
+        id: 1,
+        nombre: 'Carta de mewtwo de oro',
+        descripcion: 'cosas',
+        estrellas: 5,
+        src: '../media/sobre_mewtwo/mewtwo_oro.jpg'
+    }
+];
+
+
+function cargarCartas() {
+    const sobres = document.getElementById('mewtwo') // Contenedor de sobres
+
+    // Creamos un section donde pondremos el las cartas
+    const sobresCartas = document.createElement('section')
+    sobresCartas.classList.add('sobres_cartas', 'sobre_mewtwo')
+    
+    // Por cada elemento de la lista, añadimos una carta
+    for (let i = 0; i < dataCartasMewtwo.length; i++) {
+        const carta = document.createElement('img')
+        carta.src = dataCartasMewtwo[i].src
+        carta.alt = dataCartasMewtwo[i].nombre
+    
+        sobresCartas.appendChild(carta)
+    }
+    
+    sobres.appendChild(sobresCartas)
+}
+
+
+cargarCartas()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // -----------------FUNCIONES-----------------
 
 // Función para hacer zoom en una imagen
@@ -60,6 +109,7 @@ function selector(alt) {
 
 // Contendor donde se guardan todas las imagenes de las cartas
 const cartas = document.querySelectorAll('.sobres_cartas img')
+
 
 // -----------------ZOOM Y SELECTOR-----------------
 
