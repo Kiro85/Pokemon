@@ -22,11 +22,11 @@ const dataCartaspikachu = [
 
 function cargarCartas() {
     // Sobre Mewtwo
-    const sobresMewtwo = document.getElementById('mewtwo') // Contenedor de sobres
+    const sobreMewtwo = document.getElementById('mewtwo') // Contenedor de sobres
 
     // Creamos un section donde pondremos el las cartas
-    const sobresCartasMewtwo = document.createElement('section')
-    sobresCartasMewtwo.classList.add('sobres_cartas', 'sobre_mewtwo')
+    const cartasMewtwo = document.createElement('section')
+    cartasMewtwo.classList.add('sobres_cartas', 'sobre_mewtwo')
     
     // Por cada elemento de la lista, añadimos una carta
     for (let i = 0; i < dataCartasMewtwo.length; i++) {
@@ -34,17 +34,17 @@ function cargarCartas() {
         carta.src = dataCartasMewtwo[i].src
         carta.alt = dataCartasMewtwo[i].nombre
     
-        sobresCartasMewtwo.appendChild(carta)
+        cartasMewtwo.appendChild(carta)
     }
     
-    sobresMewtwo.appendChild(sobresCartasMewtwo)
+    sobreMewtwo.appendChild(cartasMewtwo)
 
     // Sobre Pikachu
-    const sobresPikachu = document.getElementById('pikachu') // Contenedor de sobres
+    const sobrePikachu = document.getElementById('pikachu') // Contenedor de sobres
 
     // Creamos un section donde pondremos el las cartas
-    const sobresCartasPikachu = document.createElement('section')
-    sobresCartasPikachu.classList.add('sobres_cartas', 'sobre_pikachu')
+    const cartasPikachu = document.createElement('section')
+    cartasPikachu.classList.add('sobres_cartas', 'sobre_pikachu')
     
     // Por cada elemento de la lista, añadimos una carta
     for (let i = 0; i < dataCartasMewtwo.length; i++) {
@@ -52,10 +52,10 @@ function cargarCartas() {
         carta.src = dataCartaspikachu[i].src
         carta.alt = dataCartaspikachu[i].nombre
     
-        sobresCartasPikachu.appendChild(carta)
+        cartasPikachu.appendChild(carta)
     }
     
-    sobresPikachu.appendChild(sobresCartasPikachu)
+    sobrePikachu.appendChild(cartasPikachu)
 
 
 
