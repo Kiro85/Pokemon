@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Pokémon TCGP, cartas, nintendo, juego, cartas"/>
+    <meta name="author" content="Cristian Pérez Juárez, Sven Lee Jansen Gorreta" />
+    <meta name="description" content="Página web basada en el juego de pokémon TCGP (porfa nintendo no nos denuncies)"/>
+    <title>Pokémon TCGP</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body class="form">
+    <header>
+        <!--Imagen de portada-->
+        <section id="banner_formulario"></section>
+    </header>
+
+    <main class="form">
+        <!--Barra de navegación-->
+        <nav>
+            <ul>
+                <a href="../index.html"><li><p>Index</p></li></a>
+                <a href="../pages/sobres.html"><li><p>Sobres</p></li></a>
+                <a href="../pages/detalles.html"><li><p>Detalles</p></li></a>
+                <a href="../pages/info.html"><li><p>Info</p></li></a>
+
+                <!-- Boton claro_oscuro -->
+                <input type="image" src="/media/dark ball.png" alt="pokeball" class="pokeball">
+            </ul>
+        </nav>
+
+        <!-- Formulario de datos de Usuario -->
+        <form action="" method="post" class="form_formulario">
+            <fieldset>
+                <legend>Datos del usuario</legend>
+        
+                <label for="usuarioNombre">*Nombre del usuario:</label>
+                <input type="text" name="nombre" id="usuarioNombre" pattern="^[\w.-]+@[a-zA-Z\d.-]+\.[a-zA-Z]{2,}$" required>
+        
+                <label for="usuarioMail">*Dirección de correo:</label>
+                <input type="email" name="email" id="usuarioMail" pattern="^\d{10}$" required>
+                
+            </fieldset>
+            <fieldset>
+                <legend>Mensaje del usuario</legend>
+        
+                <label for="usuarioMensaje">Mensaje: </label>
+                <input type="textarea" name="mensaje" id="usuarioMensaje">
+        
+                <button type="submit">Enviar</button>
+                <button type="reset">Borrar Formulario</button>
+            </fieldset>
+        </form>
+
+        <article>
+            <div class="titulo_comentario">
+                <h1>Título Principal</h1>
+            </div>
+            <div class="contenido_comentarios">
+                <div class="comentario">
+                    <div class="usuario">Juan Pérez</div>
+                    <div class="texto">Este es un comentario de ejemplo.</div>
+                </div>
+                <div class="comentario">
+                    <div class="usuario">María López</div>
+                    <div class="texto">Otro comentario interesante aquí.</div>
+                </div>
+                <div class="comentario">
+                    <div class="usuario">Carlos Sánchez</div>
+                    <div class="texto">Más texto de comentario para probar el diseño.</div>
+                </div>
+                
+            </div>
+        </article>
+               
+    </main>
+
+    <footer>
+        <h1>Desarrollado por:</h1>
+        <ul>
+            <li>
+                <a href="https://github.com/kiro85" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Icon"> Cristian Pérez Juárez
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/SvenLee-J" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Icon"> Sven Lee Jansen Gorreta
+                </a>
+            </li>
+        </ul>
+    </footer>
+</body>
+</html>
