@@ -1,5 +1,15 @@
-// Objeto con toda la información de las cartas
+// Objeto con toda la información de las cartas Mewtwo
 const dataCartasMewtwo = [
+    {
+        id: 1,
+        nombre: 'Carta de mewtwo de oro',
+        descripcion: 'cosas',
+        estrellas: 5,
+        src: '../media/sobre_mewtwo/mewtwo_oro.jpg'
+    }
+];
+// Objeto con toda la información de las cartas Pikachu
+const dataCartaspikachu = [
     {
         id: 1,
         nombre: 'Carta de mewtwo de oro',
@@ -11,11 +21,12 @@ const dataCartasMewtwo = [
 
 
 function cargarCartas() {
-    const sobres = document.getElementById('mewtwo') // Contenedor de sobres
+    // Sobre Mewtwo
+    const sobresMewtwo = document.getElementById('mewtwo') // Contenedor de sobres
 
     // Creamos un section donde pondremos el las cartas
-    const sobresCartas = document.createElement('section')
-    sobresCartas.classList.add('sobres_cartas', 'sobre_mewtwo')
+    const sobresCartasMewtwo = document.createElement('section')
+    sobresCartasMewtwo.classList.add('sobres_cartas', 'sobre_mewtwo')
     
     // Por cada elemento de la lista, añadimos una carta
     for (let i = 0; i < dataCartasMewtwo.length; i++) {
@@ -23,10 +34,32 @@ function cargarCartas() {
         carta.src = dataCartasMewtwo[i].src
         carta.alt = dataCartasMewtwo[i].nombre
     
-        sobresCartas.appendChild(carta)
+        sobresCartasMewtwo.appendChild(carta)
     }
     
-    sobres.appendChild(sobresCartas)
+    sobresMewtwo.appendChild(sobresCartasMewtwo)
+
+    // Sobre Pikachu
+    const sobresPikachu = document.getElementById('pikachu') // Contenedor de sobres
+
+    // Creamos un section donde pondremos el las cartas
+    const sobresCartasPikachu = document.createElement('section')
+    sobresCartasPikachu.classList.add('sobres_cartas', 'sobre_pikachu')
+    
+    // Por cada elemento de la lista, añadimos una carta
+    for (let i = 0; i < dataCartasMewtwo.length; i++) {
+        const carta = document.createElement('img')
+        carta.src = dataCartaspikachu[i].src
+        carta.alt = dataCartaspikachu[i].nombre
+    
+        sobresCartasPikachu.appendChild(carta)
+    }
+    
+    sobresPikachu.appendChild(sobresCartasPikachu)
+
+
+
+
 }
 
 
