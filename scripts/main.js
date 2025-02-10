@@ -48,6 +48,8 @@ const dataCartasPikachu = [
 ];
 
 
+
+// -----------------FUNCIONES-----------------
 function cargarCartas() {
     // Sobre Mewtwo
     const sobreMewtwo = document.getElementById('mewtwo') // Contenedor de sobres
@@ -110,23 +112,6 @@ function cargarCartas() {
 
 
 cargarCartas()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// -----------------FUNCIONES-----------------
 
 // Función para hacer zoom en una imagen
 function zoom(src, alt, sobre) {
