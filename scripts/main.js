@@ -1,22 +1,50 @@
 // Objeto con toda la información de las cartas Mewtwo
 const dataCartasMewtwo = [
-    {
-        id: 1,
-        nombre: 'Carta de mewtwo de oro',
-        descripcion: 'cosas',
-        estrellas: 5,
-        src: '../media/sobre_mewtwo/mewtwo_oro.jpg'
-    }
+    { id: 1, nombre: 'Carta de mewtwo de oro', descripcion: 'Mewtwo', estrellas: 5, src: '../media/sobre_mewtwo/mewtwo_oro.jpg' },
+    { id: 2, nombre: 'Carta de mewtwo inmersiva', descripcion: 'Mewtwo', estrellas: 4, src: '../media/sobre_mewtwo/mewtwo_inmersivo.jpg' },
+    { id: 3, nombre: 'Carta de mewtwo', descripcion: 'Mewtwo', estrellas: 4, src: '../media/sobre_mewtwo/mewtwo.jpg' },
+    { id: 4, nombre: 'Carta de articuno full art', descripcion: 'Articuno', estrellas: 4, src: '../media/sobre_mewtwo/articuno.jpg' },
+    { id: 5, nombre: 'Carta de articuno', descripcion: 'Articuno', estrellas: 3, src: '../media/sobre_mewtwo/articuno2.jpg' },
+    { id: 6, nombre: 'Carta de gengar full art', descripcion: 'Gengar', estrellas: 5, src: '../media/sobre_mewtwo/gengar.jpg' },
+    { id: 7, nombre: 'Carta de gengar', descripcion: 'Gengar', estrellas: 3, src: '../media/sobre_mewtwo/gengar2.jpg' },
+    { id: 8, nombre: 'Carta de cubone', descripcion: 'Cubone', estrellas: 2, src: '../media/sobre_mewtwo/cubone.jpg' },
+    { id: 9, nombre: 'Carta de porygon', descripcion: 'Porygon', estrellas: 2, src: '../media/sobre_mewtwo/porygon.jpg' },
+    { id: 10, nombre: 'Carta de giovanni', descripcion: 'Giovanni', estrellas: 3, src: '../media/sobre_mewtwo/giovanni.jpg' },
+    { id: 11, nombre: 'Carta de venusaur', descripcion: 'Venusaur', estrellas: 5, src: '../media/sobre_mewtwo/venusaur.jpg' },
+    { id: 12, nombre: 'Carta de dragonite', descripcion: 'Dragonite', estrellas: 5, src: '../media/sobre_mewtwo/dragonite.jpg' },
+    { id: 13, nombre: 'Carta de bulbasaur', descripcion: 'Bulbasaur', estrellas: 3, src: '../media/sobre_mewtwo/bulbasaur.png' }
+];
+// Objeto con toda la información de las cartas Charizard
+const dataCartasCharizard = [
+    { id: 1, nombre: 'Carta de charizard de oro', descripcion: 'Charizard', estrellas: 5, src: '../media/sobre_charizard/charizard_oro.jpg' },
+    { id: 2, nombre: 'Carta de charizard inmersiva', descripcion: 'Charizard', estrellas: 4, src: '../media/sobre_charizard/charizard_inmersiva.jpg' },
+    { id: 3, nombre: 'Carta de charizard', descripcion: 'Charizard', estrellas: 4, src: '../media/sobre_charizard/charizard.jpg' },
+    { id: 4, nombre: 'Carta de moltres full art', descripcion: 'Moltres', estrellas: 4, src: '../media/sobre_charizard/moltres.jpg' },
+    { id: 5, nombre: 'Carta de moltres', descripcion: 'Moltres', estrellas: 3, src: '../media/sobre_charizard/moltres2.jpg' },
+    { id: 6, nombre: 'Carta de arcanine', descripcion: 'Arcanine', estrellas: 4, src: '../media/sobre_charizard/arcanine.jpg' },
+    { id: 7, nombre: 'Carta de alakazam', descripcion: 'Alakazam', estrellas: 4, src: '../media/sobre_charizard/alakazam.jpg' },
+    { id: 8, nombre: 'Carta de machamp', descripcion: 'Machamp', estrellas: 3, src: '../media/sobre_charizard/machamp.jpg' },
+    { id: 9, nombre: 'Carta de sabrina', descripcion: 'Sabrina', estrellas: 3, src: '../media/sobre_charizard/sabrina.jpg' },
+    { id: 10, nombre: 'Carta de lapras', descripcion: 'Lapras', estrellas: 4, src: '../media/sobre_charizard/lapras.jpg' },
+    { id: 11, nombre: 'Carta de meowth', descripcion: 'Meowth', estrellas: 2, src: '../media/sobre_charizard/meowth.jpg' },
+    { id: 12, nombre: 'Carta de slowpoke', descripcion: 'Slowpoke', estrellas: 2, src: '../media/sobre_charizard/slowpoke.jpg' },
+    { id: 13, nombre: 'Carta de charmander', descripcion: 'Charmander', estrellas: 3, src: '../media/sobre_charizard/charmander.jpg' }
 ];
 // Objeto con toda la información de las cartas Pikachu
-const dataCartaspikachu = [
-    {
-        id: 1,
-        nombre: 'Carta de mewtwo de oro',
-        descripcion: 'cosas',
-        estrellas: 5,
-        src: '../media/sobre_mewtwo/mewtwo_oro.jpg'
-    }
+const dataCartasPikachu = [
+    { id: 1, nombre: 'Carta de pikachu de oro', descripcion: 'Pikachu', estrellas: 5, src: '../media/sobre_pikachu/pikachu_oro.jpg' },
+    { id: 2, nombre: 'Carta de pikachu inmersiva', descripcion: 'Pikachu', estrellas: 4, src: '../media/sobre_pikachu/pikachu_inmersivo.jpg' },
+    { id: 3, nombre: 'Carta de pikachu', descripcion: 'Pikachu', estrellas: 4, src: '../media/sobre_pikachu/pikachu.jpg' },
+    { id: 4, nombre: 'Carta de zapdos full art', descripcion: 'Zapdos', estrellas: 4, src: '../media/sobre_pikachu/zapdos.jpg' },
+    { id: 5, nombre: 'Carta de zapdos', descripcion: 'Zapdos', estrellas: 3, src: '../media/sobre_pikachu/zapdos2.jpg' },
+    { id: 6, nombre: 'Carta de gyarados', descripcion: 'Gyarados', estrellas: 5, src: '../media/sobre_pikachu/gyarados.jpg' },
+    { id: 7, nombre: 'Carta de blastoise', descripcion: 'Blastoise', estrellas: 5, src: '../media/sobre_pikachu/blastoise.jpg' },
+    { id: 8, nombre: 'Carta de wigglytuff', descripcion: 'Wigglytuff', estrellas: 3, src: '../media/sobre_pikachu/wigglytuff.jpg' },
+    { id: 9, nombre: 'Carta de snorlax', descripcion: 'Snorlax', estrellas: 4, src: '../media/sobre_pikachu/snorlax.jpg' },
+    { id: 10, nombre: 'Carta de digglet', descripcion: 'Digglet', estrellas: 2, src: '../media/sobre_pikachu/digglet.jpg' },
+    { id: 11, nombre: 'Carta de electrode', descripcion: 'Electrode', estrellas: 3, src: '../media/sobre_pikachu/electrode.jpg' },
+    { id: 12, nombre: 'Carta de misty', descripcion: 'Misty', estrellas: 3, src: '../media/sobre_pikachu/misty.jpg' },
+    { id: 13, nombre: 'Carta de squirtle', descripcion: 'Squirtle', estrellas: 3, src: '../media/sobre_pikachu/squirtle.jpg' }
 ];
 
 
@@ -39,6 +67,7 @@ function cargarCartas() {
     
     sobreMewtwo.appendChild(cartasMewtwo)
 
+
     // Sobre Pikachu
     const sobrePikachu = document.getElementById('pikachu') // Contenedor de sobres
 
@@ -47,10 +76,10 @@ function cargarCartas() {
     cartasPikachu.classList.add('sobres_cartas', 'sobre_pikachu')
     
     // Por cada elemento de la lista, añadimos una carta
-    for (let i = 0; i < dataCartasMewtwo.length; i++) {
+    for (let i = 0; i < dataCartasPikachu.length; i++) {
         const carta = document.createElement('img')
-        carta.src = dataCartaspikachu[i].src
-        carta.alt = dataCartaspikachu[i].nombre
+        carta.src = dataCartasPikachu[i].src
+        carta.alt = dataCartasPikachu[i].nombre
     
         cartasPikachu.appendChild(carta)
     }
@@ -58,6 +87,23 @@ function cargarCartas() {
     sobrePikachu.appendChild(cartasPikachu)
 
 
+    // Sobre Charizard
+    const sobreCharizard = document.getElementById('charizard') // Contenedor de sobres
+
+    // Creamos un section donde pondremos el las cartas
+    const cartasCharizard = document.createElement('section')
+    cartasCharizard.classList.add('sobres_cartas', 'sobre_charizard')
+    
+    // Por cada elemento de la lista, añadimos una carta
+    for (let i = 0; i < dataCartasCharizard.length; i++) {
+        const carta = document.createElement('img')
+        carta.src = dataCartasCharizard[i].src
+        carta.alt = dataCartasCharizard[i].nombre
+    
+        cartasCharizard.appendChild(carta)
+    }
+    
+    sobreCharizard.appendChild(cartasCharizard)
 
 
 }
