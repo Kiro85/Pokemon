@@ -18,7 +18,7 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-/* CSS para el banner de todas las páginas */
+/* Slider */
 
 header {
     display: flex;
@@ -28,69 +28,26 @@ header {
     width: 100%;
     height: 70vh;
     margin-bottom: 20px;
+
+    .contenedorSlider {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    
+        .slider {
+            display: flex;
+            width: 500%; /* 100% por cada imagen */
+            transition: transform 0.5s ease-in-out; /* Suaviza la transición */
+    
+            img {
+                width: 20%; /* 100% / cantidad de imágenes */
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
 }
 
-/* Banners */
-
-#banner_index {
-    display: flex;
-    justify-content: center;
-    background: 
-        linear-gradient(to bottom, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 1) 100%), 
-        url('../media/banner_index.webp');
-    background-size: cover;
-    background-position: center;
-    height: 100%;
-    width: 100%;
-}
-
-#banner_sobres {
-    display: flex;
-    justify-content: center;
-    background: 
-        linear-gradient(to bottom, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 1) 100%), 
-        url('../media/banner_sobres.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 100%;
-    width: 100%;
-}
-
-#banner_detalles {
-    display: flex;
-    justify-content: center;
-    background: 
-        linear-gradient(to bottom, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 1) 100%), 
-        url('../media/banner_detalles.jpeg');
-    background-size: cover;
-    background-position: center;
-    height: 100%;
-    width: 100%;
-}
-
-#banner_info {
-    display: flex;
-    justify-content: center;
-    background: 
-        linear-gradient(to bottom, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 1) 100%), 
-        url('../media/banner_info.jpeg');
-    background-size: cover;
-    background-position: center;
-    height: 100%;
-    width: 100%;
-}
-
-#banner_formulario {
-    display: flex;
-    justify-content: center;
-    background: 
-        linear-gradient(to bottom, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 1) 100%), 
-        url('../media/banner_formulario.jpeg');
-    background-size: cover;
-    background-position: center;
-    height: 100%;
-    width: 100%;
-}
 
 /* Barra de navegación */
 
