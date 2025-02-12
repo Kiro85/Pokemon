@@ -54,60 +54,64 @@ function cargarCartas() {
     // Sobre Mewtwo
     const sobreMewtwo = document.getElementById('mewtwo') // Contenedor de sobres
 
-    // Creamos un section donde pondremos el las cartas
-    const cartasMewtwo = document.createElement('section')
-    cartasMewtwo.classList.add('sobres_cartas', 'sobre_mewtwo')
-    
-    // Por cada elemento de la lista, añadimos una carta
-    for (let i = 0; i < dataCartasMewtwo.length; i++) {
-        const carta = document.createElement('img')
-        carta.src = dataCartasMewtwo[i].src
-        carta.alt = dataCartasMewtwo[i].nombre
-    
-        cartasMewtwo.appendChild(carta)
+    if(sobreMewtwo) {
+        // Creamos un section donde pondremos el las cartas
+        const cartasMewtwo = document.createElement('section')
+        cartasMewtwo.classList.add('sobres_cartas', 'sobre_mewtwo')
+        
+        // Por cada elemento de la lista, añadimos una carta
+        for (let i = 0; i < dataCartasMewtwo.length; i++) {
+            const carta = document.createElement('img')
+            carta.src = dataCartasMewtwo[i].src
+            carta.alt = dataCartasMewtwo[i].nombre
+        
+            cartasMewtwo.appendChild(carta)
+        }
+        
+        sobreMewtwo.appendChild(cartasMewtwo)
     }
-    
-    sobreMewtwo.appendChild(cartasMewtwo)
 
 
     // Sobre Pikachu
     const sobrePikachu = document.getElementById('pikachu') // Contenedor de sobres
 
-    // Creamos un section donde pondremos el las cartas
-    const cartasPikachu = document.createElement('section')
-    cartasPikachu.classList.add('sobres_cartas', 'sobre_pikachu')
-    
-    // Por cada elemento de la lista, añadimos una carta
-    for (let i = 0; i < dataCartasPikachu.length; i++) {
-        const carta = document.createElement('img')
-        carta.src = dataCartasPikachu[i].src
-        carta.alt = dataCartasPikachu[i].nombre
-    
-        cartasPikachu.appendChild(carta)
+    if(sobrePikachu) {
+        // Creamos un section donde pondremos el las cartas
+        const cartasPikachu = document.createElement('section')
+        cartasPikachu.classList.add('sobres_cartas', 'sobre_pikachu')
+        
+        // Por cada elemento de la lista, añadimos una carta
+        for (let i = 0; i < dataCartasPikachu.length; i++) {
+            const carta = document.createElement('img')
+            carta.src = dataCartasPikachu[i].src
+            carta.alt = dataCartasPikachu[i].nombre
+        
+            cartasPikachu.appendChild(carta)
+        }
+        
+        sobrePikachu.appendChild(cartasPikachu)
     }
-    
-    sobrePikachu.appendChild(cartasPikachu)
 
 
     // Sobre Charizard
     const sobreCharizard = document.getElementById('charizard') // Contenedor de sobres
 
-    // Creamos un section donde pondremos el las cartas
-    const cartasCharizard = document.createElement('section')
-    cartasCharizard.classList.add('sobres_cartas', 'sobre_charizard')
-    
-    // Por cada elemento de la lista, añadimos una carta
-    for (let i = 0; i < dataCartasCharizard.length; i++) {
-        const carta = document.createElement('img')
-        carta.src = dataCartasCharizard[i].src
-        carta.alt = dataCartasCharizard[i].nombre
-    
-        cartasCharizard.appendChild(carta)
+    if(sobreCharizard) {
+        // Creamos un section donde pondremos el las cartas
+        const cartasCharizard = document.createElement('section')
+        cartasCharizard.classList.add('sobres_cartas', 'sobre_charizard')
+        
+        // Por cada elemento de la lista, añadimos una carta
+        for (let i = 0; i < dataCartasCharizard.length; i++) {
+            const carta = document.createElement('img')
+            carta.src = dataCartasCharizard[i].src
+            carta.alt = dataCartasCharizard[i].nombre
+        
+            cartasCharizard.appendChild(carta)
+        }
+        
+        sobreCharizard.appendChild(cartasCharizard)
     }
-    
-    sobreCharizard.appendChild(cartasCharizard)
-
-
 }
 
 
@@ -146,26 +150,26 @@ function selector(alt) {
     // Dependiendo del sobre al que se haya hecho click, abriremos un sobre u otro
     if (alt == 'Sobre de Mewtwo') {
         // Primero eliminamos las actives que puedan haber
-        sobreMewtwo.classList.remove('sobreActive')
-        sobreCharizard.classList.remove('sobreActive')
-        sobrePikachu.classList.remove('sobreActive')
+        sobreMewtwo.classList.remove('active')
+        sobreCharizard.classList.remove('active')
+        sobrePikachu.classList.remove('active')
 
         // Luego añadimos la que queremos
-        sobreMewtwo.classList.add('sobreActive')
+        sobreMewtwo.classList.add('active')
 
     } else if (alt == 'Sobre de Charizard') {
-        sobreMewtwo.classList.remove('sobreActive')
-        sobreCharizard.classList.remove('sobreActive')
-        sobrePikachu.classList.remove('sobreActive')
+        sobreMewtwo.classList.remove('active')
+        sobreCharizard.classList.remove('active')
+        sobrePikachu.classList.remove('active')
 
-        sobreCharizard.classList.add('sobreActive')
+        sobreCharizard.classList.add('active')
 
     } else if (alt == 'Sobre de Pikachu') {
-        sobreMewtwo.classList.remove('sobreActive')
-        sobreCharizard.classList.remove('sobreActive')
-        sobrePikachu.classList.remove('sobreActive')
+        sobreMewtwo.classList.remove('active')
+        sobreCharizard.classList.remove('active')
+        sobrePikachu.classList.remove('active')
 
-        sobrePikachu.classList.add('sobreActive')
+        sobrePikachu.classList.add('active')
 
     }
 }
@@ -188,4 +192,16 @@ cartas.forEach(carta => {
             selector(carta.alt)
         }
     })
+})
+
+
+
+// -----------------Menú nav para el móvil-----------------
+
+let mobile = document.getElementById('mobile')
+let mobileMenu = document.getElementById('mobileMenu')
+
+// Enseñam u ocultamos el menú de navegación para el móvil
+mobile.addEventListener('click', () => {
+    mobileMenu.classList.toggle('active')
 })

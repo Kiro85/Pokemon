@@ -94,7 +94,9 @@ header {
 
 /* Barra de navegación */
 
-nav {
+/* Versión para resoluciones grandes */
+
+nav#desktop{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -129,6 +131,82 @@ nav {
             text-decoration: none;
         }
     }
+}
+
+/* Versión para resoluciones pequeñas */
+
+nav#mobile {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    width: 60px;
+    height: 50px;
+    border-radius: 20px;
+    align-self: start;
+    margin-left: 30px;
+    position: sticky;
+    top: 5px;
+    z-index: 3;
+
+    i {
+        color: white;
+        font-size: 1.8em;
+    }
+}
+
+nav#mobileMenu {
+    display: none;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    background-color: #333;
+    width: 85%;
+    height: 70vh;
+    border-radius: 20px;
+    align-self: start;
+    margin-left: 30px;
+    position: sticky;
+    top: 80px;
+    z-index: 3;
+
+    h1 {
+        margin: 5%;
+        color: white
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 60px 0;
+        margin: 5%;
+        width: 100%;
+        height: 100%;
+        list-style: none;
+
+        a {
+            text-decoration: none;
+            color: white;
+            width: 100%;
+            background-color: #6d6c6c;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.3em;
+
+            &:focus {
+                font-size: 1.4em;
+                color: gold;
+            }
+        }
+    }
+}
+/* Clase para activar el menú */
+nav#mobileMenu.active {
+    display: flex;
 }
 
 .pokeball {
@@ -351,7 +429,7 @@ main {
         }
 
         /* Clase para activar el active de los sobres con JS */
-        .sobreActive {
+        .active {
             display: flex;
         }
         
@@ -568,16 +646,12 @@ footer {
         display: none;
     }
 
-    nav {
-        width: 100%;
-        height: 70px;
-        border-radius: 0;
-        position: sticky;
+    nav#desktop {
+        display: none;
+    }
 
-        ul a{
-            padding: 0 20px;
-            height: 100%;
-        }
+    nav#mobile {
+        display: flex;
     }
 
     .pokeballsup, .pokeballinf {
