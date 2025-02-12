@@ -8,6 +8,8 @@
     <meta name="description" content="Página web basada en el juego de pokémon TCGP (porfa nintendo no nos denuncies)"/>
     <title>Pokémon TCGP</title>
     <link rel="stylesheet" href="../style/style.css">
+    <script src="../scripts/main.js" defer></script>
+    <script src="https://kit.fontawesome.com/9f3679bcbc.js" crossorigin="anonymous"></script> <!--Iconos-->
 </head>
 <body class="form">
     <header>
@@ -17,20 +19,37 @@
 
     <main class="form">
         <!--Barra de navegación-->
-        <nav>
-            <ul>
-                <a href="../index.html"><li><p>Index</p></li></a>
-                <a href="../pages/sobres.html"><li><p>Sobres</p></li></a>
-                <a href="../pages/detalles.html"><li><p>Detalles</p></li></a>
-                <a href="../pages/info.html"><li><p>Info</p></li></a>
 
-                <!-- Boton claro_oscuro -->
-                <input type="image" src="/media/dark ball.png" alt="pokeball" class="pokeball">
-            </ul>
-        </nav>
+            <!--Versión para resoluciones grandes-->
+            <nav id="desktop">
+                <ul>
+                    <a href="../pages/sobres.html"><li><p>Sobres</p></li></a>
+                    <a href="../pages/detalles.html"><li><p>Detalles</p></li></a>
+                    <a href="../pages/info.html"><li><p>Info</p></li></a>
+                    <a href="../index.html"><li><p>Index</p></li></a>
+                    <!-- Boton claro_oscuro -->
+                    <img src="/media/dark ball.png" alt="pokeball" class="pokeball">
+                </ul>
+            </nav>
+    
+                <!--Versión para resoluciones pequeñas-->
+            <nav id="mobile">
+                <i class="fa-solid fa-bars"></i>
+            </nav>
+    
+            <nav id="mobileMenu">
+                <h1>Menú</h1>
+                <ul>
+                    <a href="../pages/sobres.html"><li><p>Sobres</p></li></a>
+                    <a href="../pages/detalles.html"><li><p>Detalles</p></li></a>
+                    <a href="../pages/info.html"><li><p>Info</p></li></a>
+                    <a href="../index.html"><li><p>Index</p></li></a>
+                </ul>
+            </nav>
 
-        <!-- Formulario de datos de Usuario -->
-        <form action="" method="post" class="form_formulario">
+            
+          <!-- Formulario de datos de Usuario -->
+          <form action="" method="post" class="form_formulario">
             <fieldset>
                 <legend>Datos del usuario</legend>
         

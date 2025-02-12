@@ -8,6 +8,8 @@
     <meta name="description" content="Página web basada en el juego de pokémon TCGP (porfa nintendo no nos denuncies)"/>
     <title>Pokémon TCGP</title>
     <link rel="stylesheet" href="../style/style.css">
+    <script src="../scripts/main.js" defer></script>
+    <script src="https://kit.fontawesome.com/9f3679bcbc.js" crossorigin="anonymous"></script> <!--Iconos-->
 </head>
 <body>
     <header>
@@ -17,78 +19,55 @@
     
     <main>
         <!--Barra de navegación-->
-        <nav>
-            <ul>
+
+            <!--Versión para resoluciones grandes-->
+            <nav id="desktop">
+              <ul>
+                  <a href="../index.html"><li><p>Index</p></li></a>
+                  <a href="../pages/detalles.html"><li><p>Detalles</p></li></a>
+                  <a href="../pages/info.html"><li><p>Info</p></li></a>
+                  <a href="../pages/formularios.html"><li><p>Formulario</p></li></a>
+                  <!-- Boton claro_oscuro -->
+                  <img src="/media/dark ball.png" alt="pokeball" class="pokeball">
+              </ul>
+          </nav>
+  
+              <!--Versión para resoluciones pequeñas-->
+          <nav id="mobile">
+              <i class="fa-solid fa-bars"></i>
+          </nav>
+  
+          <nav id="mobileMenu">
+              <h1>Menú</h1>
+              <ul>
                 <a href="../index.html"><li><p>Index</p></li></a>
-                <a href="./detalles.html"><li><p>Detalles</p></li></a>
-                <a href="./info.html"> <li><p>Info</p></li></a>
-                <a href="./formularios.html"><li><p>Formulario</p></li></a>
-                <!-- Boton claro_oscuro -->
-                <input type="image" src="/media/dark ball.png" alt="pokeball" class="pokeball">
-            </ul>
-        </nav>
+                <a href="../pages/detalles.html"><li><p>Detalles</p></li></a>
+                <a href="../pages/info.html"><li><p>Info</p></li></a>
+                <a href="../pages/formularios.html"><li><p>Formulario</p></li></a>
+              </ul>
+          </nav>
 
         <h1>Página de sobres</h1>
 
-        <!--Imagenes Sobre-->
-        <article class="sobres">
-            <img src="../media/sobre_mewtwo.jpg" alt="Sobre de Mewtwo">
-            <section class="sobres_cartas sobre_mewtwo">
-                <img src="../media/sobre_mewtwo/mewtwo_oro.jpg" alt="Carta de mewtwo de oro">
-                <img src="../media/sobre_mewtwo/mewtwo_inmersivo.jpg" alt="Carta de mewtwo inmersiva">
-                <img src="../media/sobre_mewtwo/mewtwo.jpg" alt="Carta de mewtwo">
-                <img src="../media/sobre_mewtwo/articuno.jpg" alt="Carta de articuno full art">
-                <img src="../media/sobre_mewtwo/articuno2.jpg" alt="Carta de articuno">
-                <img src="../media/sobre_mewtwo/gengar.jpg" alt="Carta de gengar full art">
-                <img src="../media/sobre_mewtwo/gengar2.jpg" alt="Carta de gengar">
-                <img src="../media/sobre_mewtwo/cubone.jpg" alt="Carta de cubone">
-                <img src="../media/sobre_mewtwo/porygon.jpg" alt="Carta de porygon">
-                <img src="../media/sobre_mewtwo/giovanni.jpg" alt="Carta de giovanni">
-                <img src="../media/sobre_mewtwo/venusaur.jpg" alt="Carta de venusaur">
-                <img src="../media/sobre_mewtwo/dragonite.jpg" alt="Carta de dragonite">                
-                <img src="../media/sobre_mewtwo/bulbasaur.png" alt="Carta de bulbasaur">
-            </section>
-        </article>
-
-        <!--Imagenes Sobre-->
-        <article class="sobres">
-            <img src="../media/sobre_charizard.jpg" alt="Sobre de Charizard">
-            <section class="sobres_cartas sobre_charizard">
-                <img src="../media/sobre_charizard/charizard_oro.jpg" alt="Carta de charizard de oro">
-                <img src="../media/sobre_charizard/charizard_inmersiva.jpg" alt="Carta de charizard imersiva">
-                <img src="../media/sobre_charizard/charizard.jpg" alt="Carta de charizard ">
-                <img src="../media/sobre_charizard/moltres.jpg" alt="Carta de moltres full art"> 
-                <img src="../media/sobre_charizard/moltres2.jpg" alt="Carta de moltres"> 
-                <img src="../media/sobre_charizard/arcanine.jpg" alt="Carta de arcanine"> 
-                <img src="../media/sobre_charizard/alakazam.jpg" alt="Carta de alakazam"> 
-                <img src="../media/sobre_charizard/machamp.jpg" alt="Carta de machamp"> 
-                <img src="../media/sobre_charizard/sabrina.jpg" alt="Carta de sabrina"> 
-                <img src="../media/sobre_charizard/lapras.jpg" alt="Carta de lapras"> 
-                <img src="../media/sobre_charizard/meowth.jpg" alt="Carta de meowth"> 
-                <img src="../media/sobre_charizard/slowpoke.jpg" alt="Carta de slowpoke"> 
-                <img src="../media/sobre_charizard/charmander.jpg" alt="Carta de charmander"> 
-            </section>
-        </article>
-
-        <!--Imagenes Sobre-->
-        <article class="sobres">
-            <img src="../media/sobre_pikachu.jpg" alt="Sobre de Mewtwo">
-            <section class="sobres_cartas sobre_pikachu">
-                <img src="../media/sobre_pikachu/pikachu_oro.jpg" alt="Carta de pikachu de oro">
-                <img src="../media/sobre_pikachu/pikachu_inmersivo.jpg" alt="Carta de pikachu inmersivo">
-                <img src="../media/sobre_pikachu/pikachu.jpg" alt="Carta de pikachu">
-                <img src="../media/sobre_pikachu/zapdos.jpg" alt="Carta de zaptos full art">
-                <img src="../media/sobre_pikachu/zapdos2.jpg" alt="Carta de zapdos">
-                <img src="../media/sobre_pikachu/gyarados.jpg" alt="Carta de gyarados">
-                <img src="../media/sobre_pikachu/blastoise.jpg" alt="Carta de blastoise">
-                <img src="../media/sobre_pikachu/wigglytuff.jpg" alt="Carta de wigglytuff">
-                <img src="../media/sobre_pikachu/snorlax.jpg" alt="Carta de snorlax">
-                <img src="../media/sobre_pikachu/digglet.jpg" alt="Carta de digglet">
-                <img src="../media/sobre_pikachu/electrode.jpg" alt="Carta de electrode">
-                <img src="../media/sobre_pikachu/misty.jpg" alt="Carta de misty">
-                <img src="../media/sobre_pikachu/squirtle.jpg" alt="Carta de squirtle">
-            </section>
-        </article>
+        <section class="contenedorSobres">
+            <!--Imagenes del selector de sobres-->
+            <article class="sobres">
+                <section class="sobres_cartas selectorSobres">
+                    <img src="../media/sobre_mewtwo.jpg" alt="Sobre de Mewtwo">
+                    <img src="../media/sobre_charizard.jpg" alt="Sobre de Charizard">
+                    <img src="../media/sobre_pikachu.jpg" alt="Sobre de Pikachu">
+                </section>
+            </article>
+            
+            <!--Imagenes Sobre-->
+            <article class="sobres" id="mewtwo"></article>
+    
+            <!--Imagenes Sobre-->
+            <article class="sobres" id="charizard"></article>
+    
+            <!--Imagenes Sobre-->
+            <article class="sobres" id="pikachu"></article>
+        </section>
     </main>
 
     <footer>

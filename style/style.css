@@ -94,31 +94,32 @@ header {
 
 /* Barra de navegación */
 
-nav {
+/* Versión para resoluciones grandes */
+
+nav#desktop{
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #333;
     border-radius: 100px;
-    min-width: 25%;
+    min-width: 40%;
     position: sticky;
     top: 5px;
     z-index: 3;
-    position: relative;
 
     ul {
         display: flex;
         list-style: none;
 
         li {
-            padding: 10px 30px;
+            padding: 10px 20px;
             color: white;
             font-size: 1.2em;
             cursor: pointer;
 
             &:hover {
                 background-color: #444;
-                border-radius: 100px;
+                border-radius: 5px;
             }
 
             p {
@@ -130,6 +131,82 @@ nav {
             text-decoration: none;
         }
     }
+}
+
+/* Versión para resoluciones pequeñas */
+
+nav#mobile {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    width: 60px;
+    height: 50px;
+    border-radius: 20px;
+    align-self: start;
+    margin-left: 30px;
+    position: sticky;
+    top: 5px;
+    z-index: 3;
+
+    i {
+        color: white;
+        font-size: 1.8em;
+    }
+}
+
+nav#mobileMenu {
+    display: none;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    background-color: #333;
+    width: 85%;
+    height: 70vh;
+    border-radius: 20px;
+    align-self: start;
+    margin-left: 30px;
+    position: sticky;
+    top: 80px;
+    z-index: 3;
+
+    h1 {
+        margin: 5%;
+        color: white
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 60px 0;
+        margin: 5%;
+        width: 100%;
+        height: 100%;
+        list-style: none;
+
+        a {
+            text-decoration: none;
+            color: white;
+            width: 100%;
+            background-color: #6d6c6c;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.3em;
+
+            &:focus {
+                font-size: 1.4em;
+                color: gold;
+            }
+        }
+    }
+}
+/* Clase para activar el menú */
+nav#mobileMenu.active {
+    display: flex;
 }
 
 /* Imagen Boton */
@@ -226,7 +303,6 @@ main {
     }    
 }
     
-
     /* Imágenes laterales */
     
     .pokeballsup {
@@ -242,122 +318,124 @@ main {
     }
 }
 
-/* Pagina comentarios */
-
-.titulo_comentario {
-    background-color:rgb(238, 206, 25);
-    color: black;
-    text-align: center;
-    padding: 5px;
-    width: 100%;
-    border-radius: 8px;
-}
-
-.contenido_comentarios {
-    background-color: white;
-    width: 100%;
-    padding: 5px;
-    margin-top: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-}
-
-/* Estilos para la estructura de comentarios */
-.comentario {
-    display: flex;
-    border-bottom: 1px solid #ddd;
-    padding: 10px 0;
-}
-
-.usuario {
-    width: 30%;
-    font-weight: bold;
-    padding-right: 10px;
-    text-align: right;
-    color: #333;
-}
-
-.texto {
-    width: 70%;
-    padding-left: 10px;
-    color: #555;
-}
-
-/* Elimina la ultima separacion de los comentarios */
-.comentario:last-child {
-    border-bottom: none;
-}
-
 /*Pagina de sobres*/
 
-/*CSS para común para todos los apartados*/
+/*CSS común para todos los apartados*/
 
-.sobres {
+.contenedorSobres {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 80%;
-    max-width: 1200px;
-    margin-top: 80px;
-    gap: 30px 0;
-}
 
-.sobres_cartas {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 20px;
-    box-shadow: 10px 10px 20px;
-    transition: transform 0.3s ease; 
-
-    &:hover {
-        transform: scale(1.02);
-    }
-
-    img {
-        width: 200px;
-        flex: 0 1 auto;
-        max-width: 200px;
-    }
-}
-
-/*CSS individual para cada apartado*/
-
-.sobre_mewtwo {
-    background: linear-gradient(135deg, #333, #722fc5);
-    border: #ecd5ed solid 4px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; 
+    .sobres {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        max-width: 1200px;
+        margin-top: 80px;
+        gap: 30px 0;
     
-    &:hover {
-        box-shadow: 10px 10px 20px rgba(162, 0, 255, 0.8);
-        border-color: rgba(162, 0, 255, 0.8);
-    }
-}
+        .sobres_cartas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 20px;
+            box-shadow: 10px 10px 20px;
+            transition: transform 0.3s ease; 
+        
+            &:hover {
+                transform: scale(1.02);
+            }
+        
+            img {
+                width: 200px;
+                flex: 0 1 auto;
+                max-width: 200px;
+            }
+        }
 
-.sobre_charizard {
-    background: linear-gradient(135deg, #333, #ce2d00);
-    border: #f0a43c solid 4px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; 
-    
-    &:hover {
-        box-shadow: 10px 10px 20px rgba(255, 60, 1, 0.8);
-        border-color: rgba(255, 60, 1, 0.8);
-    }
-}
+        /*CSS individual para cada apartado*/
 
-.sobre_pikachu {
-    background: linear-gradient(135deg, #333, #f9d717);
-    border: #f4e952 solid 4px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; 
+        .selectorSobres {
+            background: linear-gradient(135deg, #fa4710, #43fd14);
+            border: #ecd5ed solid 4px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; 
+            
+            &:hover {
+                box-shadow: 10px 10px 20px #43fd14;
+                border-color: #43fd14;
+            }
+        }
+
+        .sobre_mewtwo {
+            display: none;
+
+            background: linear-gradient(135deg, #333, #722fc5);
+            border: #ecd5ed solid 4px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; 
+            
+            &:hover {
+                box-shadow: 10px 10px 20px rgba(162, 0, 255, 0.8);
+                border-color: rgba(162, 0, 255, 0.8);
+            }
+        }
+
+        .sobre_charizard {
+            display: none;
+
+            background: linear-gradient(135deg, #333, #ce2d00);
+            border: #f0a43c solid 4px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; 
+            
+            &:hover {
+                box-shadow: 10px 10px 20px rgba(255, 60, 1, 0.8);
+                border-color: rgba(255, 60, 1, 0.8);
+            }
+        }
+
+        .sobre_pikachu {
+            display: none;
+
+            background: linear-gradient(135deg, #333, #f9d717);
+            border: #f4e952 solid 4px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; 
+            
+            &:hover {
+                box-shadow: 10px 10px 20px rgba(249, 253, 0, 0.8);
+                border-color: rgba(249, 253, 0, 0.8);
+            }
+        }
+
+        /* Clase para activar el active de los sobres con JS */
+        .active {
+            display: flex;
+        }
+        
+        /* Clase para el zoom de las cartas con JS */
+        .zoomFondo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 5;
+        }
     
-    &:hover {
-        box-shadow: 10px 10px 20px rgba(249, 253, 0, 0.8);
-        border-color: rgba(249, 253, 0, 0.8);
-    }
+        .zoomCarta {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }    
 }
 
 /* Página de detalles */
@@ -492,6 +570,52 @@ form {
     }
 }
 
+/* Pagina comentarios */
+
+.titulo_comentario {
+    background-color:rgb(238, 206, 25);
+    color: black;
+    text-align: center;
+    padding: 5px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.contenido_comentarios {
+    background-color: white;
+    width: 100%;
+    padding: 5px;
+    margin-top: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+/* Estilos para la estructura de comentarios */
+.comentario {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.usuario {
+    width: 30%;
+    font-weight: bold;
+    padding-right: 10px;
+    text-align: right;
+    color: #333;
+}
+
+.texto {
+    width: 70%;
+    padding-left: 10px;
+    color: #555;
+}
+
+/* Elimina la ultima separacion de los comentarios */
+.comentario:last-child {
+    border-bottom: none;
+}
+
 
 /* Footer de las páginas */
 
@@ -552,23 +676,15 @@ footer {
         display: none;
     }
 
-    nav {
-        width: 100%;
-        height: 70px;
-        border-radius: 0;
-        position: sticky;
-
-        ul a{
-            padding: 0 20px;
-            height: 100%;
-        }
-    }
-
-    .pokeballsup, .pokeballinf {
+    nav#desktop {
         display: none;
     }
 
-    .pokeball {
+    nav#mobile {
+        display: flex;
+    }
+
+    .pokeballsup, .pokeballinf {
         display: none;
     }
 
@@ -576,18 +692,16 @@ footer {
         flex-direction: column;
     }
 
-    .sobres_cartas {
+    .sobres_cartas, .selectorSobres {
         gap: 8px;
         padding: 10px;
     }
 
-    .sobres > img {
+    .sobres > img, .selectorSobres > img {
         max-width: 40%;
     }
 
-    .sobres_cartas {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-
+    .sobres_cartas, .selectorSobres {
         img {
             width: 100px;
         }
