@@ -54,10 +54,7 @@
                 <legend>Datos del usuario</legend>
         
                 <label for="usuarioNombre">*Nombre del usuario:</label>
-                <input type="text" name="nombre" id="usuarioNombre" pattern="^[\w.-]+@[a-zA-Z\d.-]+\.[a-zA-Z]{2,}$" required>
-        
-                <label for="usuarioMail">*Dirección de correo:</label>
-                <input type="email" name="email" id="usuarioMail" pattern="^\d{10}$" required>
+                <input type="text" name="nombre" id="usuarioNombre" required>
                 
             </fieldset>
             <fieldset>
@@ -66,31 +63,20 @@
                 <label for="usuarioMensaje">Mensaje: </label>
                 <input type="textarea" name="mensaje" id="usuarioMensaje">
         
-                <button type="submit">Enviar</button>
+                <button type="submit" id="submitComentario">Enviar</button>
                 <button type="reset">Borrar Formulario</button>
             </fieldset>
         </form>
 
-        <article>
-            <div class="titulo_comentario">
+        <!--Mensajes de los usuario-->
+        <section>
+            <section class="titulo_comentario">
                 <h1>Título Principal</h1>
-            </div>
-            <div class="contenido_comentarios">
-                <div class="comentario">
-                    <div class="usuario">Juan Pérez</div>
-                    <div class="texto">Este es un comentario de ejemplo.</div>
-                </div>
-                <div class="comentario">
-                    <div class="usuario">María López</div>
-                    <div class="texto">Otro comentario interesante aquí.</div>
-                </div>
-                <div class="comentario">
-                    <div class="usuario">Carlos Sánchez</div>
-                    <div class="texto">Más texto de comentario para probar el diseño.</div>
-                </div>
-                
-            </div>
-        </article>
+            </section>
+            <section class="contenido_comentarios" id="comentarios">
+                <!--Aquí van todos los comentarios añadidos mediante JavaScript-->
+            </section>
+        </section>
                
     </main>
 

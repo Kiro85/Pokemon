@@ -174,12 +174,50 @@ function selector(alt) {
     }
 }
 
+// Función para añadir los comentarios
+function añadirComentario(lista) {
+    let usuario = document.getElementById('usuarioNombre')
+    let mensaje = document.getElementById('usuarioMensaje')
 
-// Contendor donde se guardan todas las imagenes de las cartas
-const cartas = document.querySelectorAll('.sobres_cartas img')
+    // Añadimos a la lista los datos introducidos en el formulario
+    if (usuario && mensaje) {
+        lista.push([usuario.value, mensaje.value])
+    } else {
+        alert('NO has introducido los datos')
+    }
+}
+
+// Función para actualizar los comentarios
+function actualizarComentarios(lista) {
+    // Obtenemos los datos necesarios
+    let divComentarios = document.getElementById('comentarios')
+
+    // Eliminamos todos los comentarios para que no se acumulen
+    divComentarios.innerHTML = ''
+
+    // Por cada item en la lista, añadimos un nuevo comentario
+    for (let i = 0; i < lista.length; i++) {
+        // Creamos un nuevo apartado para introducir el mensaje del usuario
+        let nuevoComentario = document.createElement('article')
+        nuevoComentario.classList.add('comentario')
+    
+        nuevoComentario.innerHTML = `
+        <p class="usuario">${lista[i][0]}</p>
+        <p class="texto">${lista[i][1]}</p>
+        `
+    
+        // Añadimos el nuevo apartado a la sección de comentarios
+        divComentarios.appendChild(nuevoComentario)
+    }
+
+}
+
 
 
 // -----------------ZOOM Y SELECTOR-----------------
+
+// Contendor donde se guardan todas las imagenes de las cartas
+const cartas = document.querySelectorAll('.sobres_cartas img')
 
 // Por cada imagen, añadimos un evento individual. El cual llamará a la función del zoom
 cartas.forEach(carta => {
@@ -217,4 +255,19 @@ buttonColor.addEventListener('click', () => {
     body.classList.toggle('black')
     nav.style.border = 'goldenrod solid 3px'
     nav.style.boxShadow = '10px 10px 10px white'
+})
+
+
+
+// -----------------Comentarios-----------------
+
+let comentariosLista = [['Carlos Sánchez', 'Más texto de comentario para probar el diseño.']]
+let submitComentario = document.getElementById('submitComentario')
+actualizarComentarios(comentariosLista);
+
+submitComentario.addEventListener('click', (e) => {
+    e.preventDefault()
+
+    añadirComentario(comentariosLista)
+    actualizarComentarios(comentariosLista);
 })
