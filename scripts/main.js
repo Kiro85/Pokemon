@@ -195,7 +195,6 @@ cartas.forEach(carta => {
 })
 
 
-
 // -----------------Menú nav para el móvil-----------------
 
 let mobile = document.getElementById('mobile')
@@ -204,4 +203,18 @@ let mobileMenu = document.getElementById('mobileMenu')
 // Enseñam u ocultamos el menú de navegación para el móvil
 mobile.addEventListener('click', () => {
     mobileMenu.classList.toggle('active')
+})
+
+
+
+// -----------------Modo claro / oscura-----------------
+
+let buttonColor = document.getElementById('pokeball')
+let body = document.getElementById('color')
+let nav = document.getElementById('desktop')
+
+buttonColor.addEventListener('click', () => {
+    body.classList.toggle('black')
+    nav.style.border = 'goldenrod solid 3px'
+    nav.style.boxShadow = '10px 10px 10px white'
 })

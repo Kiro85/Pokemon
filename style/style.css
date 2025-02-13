@@ -18,6 +18,11 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+.black {
+    background-color: #333;
+    color: white;
+}
+
 /* CSS para el banner de todas las páginas */
 
 header {
@@ -101,6 +106,8 @@ nav#desktop{
     justify-content: center;
     align-items: center;
     background-color: #333;
+    border: goldenrod solid 3px;
+    box-shadow: 10px 10px 10px white;
     border-radius: 100px;
     min-width: 40%;
     position: sticky;
