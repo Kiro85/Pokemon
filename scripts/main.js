@@ -178,12 +178,17 @@ function selector(alt) {
 function añadirComentario(lista) {
     let usuario = document.getElementById('usuarioNombre')
     let mensaje = document.getElementById('usuarioMensaje')
+    let errorMensaje = document.getElementById('errorMensaje')
+    let pattern = /^[A-Za-z]{4}\d$/
 
     // Añadimos a la lista los datos introducidos en el formulario
-    if (usuario && mensaje) {
+    if (pattern.test(usuario.value) && mensaje) {
         lista.push([usuario.value, mensaje.value])
+        usuario.style.borderColor = 'gold'
+        errorMensaje.classList.remove('active')
     } else {
-        alert('NO has introducido los datos')
+        usuario.style.borderColor = 'red'
+        errorMensaje.classList.add('active')
     }
 }
 
@@ -261,7 +266,7 @@ buttonColor.addEventListener('click', () => {
 
 // -----------------Comentarios-----------------
 
-let comentariosLista = [['Carlos Sánchez', 'Más texto de comentario para probar el diseño.']]
+let comentariosLista = [['Carlos Sánchez', 'Texto de comentario de prueba, Añade el tuyo!']]
 let submitComentario = document.getElementById('submitComentario')
 actualizarComentarios(comentariosLista);
 

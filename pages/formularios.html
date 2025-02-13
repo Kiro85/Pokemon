@@ -53,8 +53,9 @@
             <fieldset>
                 <legend>Datos del usuario</legend>
         
-                <label for="usuarioNombre">*Nombre del usuario:</label>
-                <input type="text" name="nombre" id="usuarioNombre" required>
+                <label for="usuarioNombre">*Nombre del usuario: </label>
+                <input type="text" name="nombre" id="usuarioNombre" pattern="^[A-Za-z]{4}\d$" required>
+                <span id="errorMensaje" class="errorMensaje">Debe contener 4 letras seguidas de 1 número</span>
                 
             </fieldset>
             <fieldset>

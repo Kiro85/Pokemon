@@ -537,16 +537,6 @@ form {
     box-sizing: border-box;
     }
 
-    input[type="tel"] {
-        width: 50%;
-        padding: 5px 10px;
-        margin-bottom: 15px;
-        border: 1px solid goldenrod;
-        border-radius: 5px;
-        font-size: 0.9em;
-        box-sizing: border-box;
-    }
-
     input[type="checkbox"] {
         margin-right: 10px;
     }
@@ -574,6 +564,15 @@ form {
 
     button[type="reset"]:hover {
         background-color: #a71d2a;
+    }
+
+    .errorMensaje {
+        display: none;
+        color: red;
+    }
+
+    .active {
+        display: block;
     }
 }
 
