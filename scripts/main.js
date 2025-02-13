@@ -250,18 +250,28 @@ mobile.addEventListener('click', () => {
 
 
 
-// -----------------Modo claro / oscura-----------------
+// -----------------Modo claro / oscuro-----------------
 
 let buttonColor = document.getElementById('pokeball')
 let body = document.getElementById('color')
 let nav = document.getElementById('desktop')
+let cursor = document.querySelector(".cursorSombra")
+const shadow = document.querySelector("#cursor");
 
 buttonColor.addEventListener('click', () => {
     body.classList.toggle('black')
     nav.style.border = 'goldenrod solid 3px'
     nav.style.boxShadow = '10px 10px 10px white'
+    cursor.style.boxShadow ="10px 20px 50px 20px"
+    shadow.classList.add("cursorSombraWhite")
 })
 
+
+// ----------------- Sombra del cursor -----------------
+
+body.addEventListener("mousemove", (e) => {
+    shadow.style.transform = `translate(${e.pageX}px, ${e.pageY}px)`;
+});
 
 
 // -----------------Comentarios-----------------
