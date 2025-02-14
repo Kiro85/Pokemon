@@ -114,9 +114,6 @@ function cargarCartas() {
     }
 }
 
-
-cargarCartas()
-
 // Función para hacer zoom en una imagen
 function zoom(src, alt, sobre) {
     // Creamos un div donde pondremos la imagen con zoom
@@ -217,6 +214,34 @@ function actualizarComentarios(lista) {
 
 }
 
+// Slider
+function slider() {
+    let slider = document.getElementById('slider')
+    let img = document.querySelectorAll('.slider img') // Array con todas las imagenes para saber cuantas hay
+    let index = 0 // Index que usaremos para multiplicar el valor de porcentaje
+    
+    // Cada x segundos, ejecutamos la función con setInterval
+    setInterval(() => {
+        let porcentaje = index * -20; // Multiplicamos el index por el porcetaje del width de las imagenes que hemos puesto en el css
+    
+        slider.style.transform = `translateX(${porcentaje}%)` // Lo agregamos
+
+        // Incrementamos index en 1 para continuar el slider, si el index es mayor a la cantidad de imagenes, lo reseteamos
+        if (index >= img.length - 1) {
+            index = 0
+        } else {
+            index++
+        }
+
+    }, 3000)
+}
+
+
+
+// -----------------PROGRAMA PRINCIPAL-----------------
+
+slider();
+cargarCartas();
 
 
 // -----------------ZOOM Y SELECTOR-----------------
