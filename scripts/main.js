@@ -314,7 +314,7 @@ submitComentario.addEventListener('click', (e) => {
 // -----------------------Esconder/mostrar los comentarios-------------
 
 let buttonComent = document.getElementById('OculComent');
-let coment = document.getElementById('contenido_comentarios');
+let coment = document.getElementById('comentarios');
 
 // Agrega el "display='none'" a la informacion al cargar la pagina.
 coment.style.display = 'none';
