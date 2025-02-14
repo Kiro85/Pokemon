@@ -205,3 +205,26 @@ let mobileMenu = document.getElementById('mobileMenu')
 mobile.addEventListener('click', () => {
     mobileMenu.classList.toggle('active')
 })
+
+// -----------------------Esconder los comentarios-------------
+
+let buttonComent = document.getElementById('OculComent');
+let coment = document.getElementById('contenido_comentarios');
+
+// Agrega el "display='none'" a la informacion al cargar la pagina.
+coment.style.display = 'none';
+
+// Cuando el usuario haga clic en el botón
+buttonComent.addEventListener('click', function() {
+    // Comprobamos si los comentarios están visibles
+    if (coment.style.display === 'none') {
+        coment.style.display = 'block';
+        buttonComent.value = 'Ocultar Comentarios'; 
+    } else {
+        coment.style.display = 'none';
+        buttonComent.value = 'Mostrar Comentarios';
+    }
+});
+
+// Muestra los comentarios al enviar un comentario
+
