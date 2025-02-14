@@ -50,6 +50,30 @@ const dataCartasPikachu = [
 
 
 // -----------------FUNCIONES-----------------
+// function filtro(option, filtro) {
+
+
+//     // Sobre Mewtwo
+//     const sobreMewtwo = document.getElementById('mewtwo') // Contenedor de sobres
+
+//     if(sobreMewtwo) {
+//         // Creamos un section donde pondremos el las cartas
+//         const cartasMewtwo = document.createElement('section')
+//         cartasMewtwo.classList.add('sobres_cartas', 'sobre_mewtwo')
+        
+//         // Por cada elemento de la lista, añadimos una carta
+//         for (let i = 0; i < dataCartasMewtwo.length; i++) {
+//             const carta = document.createElement('img')
+//             carta.src = dataCartasMewtwo[i].src
+//             carta.alt = dataCartasMewtwo[i].nombre
+        
+//             cartasMewtwo.appendChild(carta)
+//         }
+        
+//         sobreMewtwo.appendChild(cartasMewtwo)
+//     }
+// }
+
 function cargarCartas() {
     // Sobre Mewtwo
     const sobreMewtwo = document.getElementById('mewtwo') // Contenedor de sobres
@@ -195,7 +219,7 @@ function actualizarComentarios(lista) {
     let divComentarios = document.getElementById('comentarios')
 
     // Eliminamos todos los comentarios para que no se acumulen
-    divComentarios.innerHTML = ''
+    divComentarios.replaceChildren();
 
     // Por cada item en la lista, añadimos un nuevo comentario
     for (let i = 0; i < lista.length; i++) {
