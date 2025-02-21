@@ -332,7 +332,6 @@ main {
             }
         
             img {
-                width: 200px;
                 flex: 0 1 auto;
                 max-width: 200px;
             }
@@ -750,6 +749,27 @@ footer {
             transform: scale(1);
         }
         
+    }
+
+    .sobres {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        max-width: 1200px;
+        margin-top: 80px;
+        gap: 30px 0;
+    
+        .sobres_cartas{
+
+        
+            img {
+                width: 100px;
+                flex: 0 1 auto;
+                max-width: 200px;
+            }
+        }
     }
 
     /* Formularios */
