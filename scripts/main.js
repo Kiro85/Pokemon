@@ -269,16 +269,34 @@ let nav = document.getElementById('desktop')
 let cursor = document.querySelector(".cursorSombra")
 const shadow = document.querySelector("#cursor");
 
+
 buttonColor.addEventListener('click', () => {
-    body.classList.toggle('black')
-    nav.style.border = 'goldenrod solid 3px'
-    nav.style.boxShadow = '10px 10px 10px white'
-    cursor.style.boxShadow ="10px 20px 50px 20px"
-    shadow.classList.add("cursorSombraWhite")
-})
+    body.classList.toggle('black');
+    nav.style.border = 'goldenrod solid 3px';
+    nav.style.boxShadow = '10px 10px 10px white';
+    cursor.style.boxShadow = "10px 20px 50px 20px";
+    shadow.classList.add("cursorSombraWhite");
+    const thElements = document.querySelectorAll('th');
+    const tdElements = document.querySelectorAll('td');
 
+    for (let th of thElements) {
+        if (th.style.backgroundColor === 'rgb(51, 51, 51)') {
+            th.style.backgroundColor = '';
+        } else {
+            th.style.backgroundColor = '#333';
+        }
+    }
 
-// ----------------- Sombra del cursor -----------------
+    for (let td of tdElements) {
+        if (td.style.backgroundColor === 'rgb(51, 51, 51)') {
+            td.style.backgroundColor = '';
+        } else {
+            td.style.backgroundColor = '#333';
+        }
+    }
+});
+
+// -}---------------- Sombra del cursor -----------------
 
 body.addEventListener("mousemove", (e) => {
     shadow.style.transform = `translate(${e.pageX}px, ${e.pageY}px)`;
@@ -301,22 +319,22 @@ if (submitComentario) {
 }
 
 
-// -----------------------Esconder/mostrar los comentarios-------------
+// -----------------------Esconder los comentarios-------------
 
-// let buttonComent = document.getElementById('OculComent');
-// let coment = document.getElementById('comentarios');
+let buttonComent = document.getElementById('OculComent');
+let coment = document.getElementById('contenido_comentarios');
 
-// // Agrega el "display='none'" a la informacion al cargar la pagina.
-// coment.style.display = 'none';
+// Agrega el "display='none'" a la informacion al cargar la pagina.
+coment.style.display = 'none';
 
-// // Cuando el usuario haga clic en el botón
-// buttonComent.addEventListener('click', function() {
-//     // Comprobamos si los comentarios están visibles
-//     if (coment.style.display === 'none') {
-//         coment.style.display = 'block';
-//         buttonComent.value = 'Ocultar Comentarios'; 
-//     } else {
-//         coment.style.display = 'none';
-//         buttonComent.value = 'Mostrar Comentarios';
-//     }
-// });
+// Cuando el usuario haga clic en el botón
+buttonComent.addEventListener('click', function() {
+    // Comprobamos si los comentarios están visibles
+    if (coment.style.display === 'none') {
+        coment.style.display = 'block';
+        buttonComent.value = 'Ocultar Comentarios'; 
+    } else {
+        coment.style.display = 'none';
+        buttonComent.value = 'Mostrar Comentarios';
+    }
+});
