@@ -62,15 +62,19 @@
         <!--Filtro de busqueda de sobres-->
 
         <section class="filtro" id="filtro">
-          <label for="ordenar">Ordenar por:</label>
+          <label for="ordenar">Ordenar por rareza:</label>
           <select id="ordenar">
-            <option value="nombre" id="fNombre">Nombre</option>
-            <option value="rareza"id="fRareza">Rareza</option>
+            <option value=0>Ninguno</option>
+            <option value=1>1</option>
+            <option value=2>2</option>
+            <option value=3>3</option>
+            <option value=4>4</option>
+            <option value=5>5</option>
           </select>
         </section>
 
 
-        <section class="contenedorSobres">
+        <section class="contenedorSobres" id="contenedorSobres">
             <!--Imagenes del selector de sobres-->
             <article class="sobres">
                 <section class="sobres_cartas selectorSobres">
