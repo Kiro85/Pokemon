@@ -321,10 +321,15 @@ if (submitComentario) {
 
 // -----------------------Esconder los comentarios-------------
 
-let buttonComent = document.getElementById('OculComent');
-let coment = document.getElementById('contenido_comentarios');
+document.addEventListener('DOMContentLoaded', () => {
+    let buttonComent = document.getElementById('OculComent');
+    let coment = document.getElementById('comentarios');
 
-// Cuando el usuario haga clic en el botón
-buttonComent.addEventListener('click', function() {
-    coment.classList.toggle('active')
+    // Verificar que los elementos existen antes de agregar el eventListener
+    if (buttonComent && coment) {
+        // Cuando el usuario haga clic en el botón
+        buttonComent.addEventListener('click', function() {
+            coment.classList.toggle('active');
+        });
+    }
 });
