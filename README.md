@@ -14,6 +14,8 @@
         - **info.html**
         - **sobres.html**
         - **formularios**
+    - **/scripts**  
+        - **/main.js**
     - **/style.** (Contiene la hoja de CSS).
         - **style.css**
 
@@ -79,58 +81,189 @@ Hemos adaptado la página para todas las resoluciones superiores a un ancho de 3
 
 ## <span style="color:blue;"> 4- Expresiones regulares para la validación.</span>
 
-~~~~
-^[\w.-]+@[a-zA-Z\d.-]+.[a-zA-Z]{2,}$
 
-- ^ y $: Aseguran que se evalúe toda la cadena.
-- [\w.-]+: Permite letras, números, guiones bajos (_), puntos (.) y guiones (-) antes del @.
+![alt text](media/readme/pattern.png)
 
-- +: Permite que haya 1 o más carácteres especificados en  el apartado anterior
+Debido a los combios de JS, nuestro formulario para añadir comentarios únicamente te pide un nombre de usuario. Por tanto solo tenemos 1 expressión regular de validación. 
 
-- @: Representa el símbolo obligatorio de un correo electrónico.
-- [a-zA-Z\d.-]+: Permite letras, números, puntos y guiones en el dominio.
+Esta expressión regular te pide que pongas 4 letras seguidas de números.
 
-- .[a-zA-Z]{2,}: Verifica que haya un punto seguido por al menos dos letras (dominio de nivel superior como .com, .org, etc.).
-~~~~
-
-~~~~
-^\d{10}$
-
-- ^: Comienza al inicio de la cadena.
-- \d: Representa un dígito (0-9).
-- {10}: Exactamente 10 dígitos.
-- $: Termina al final de la cadena.
-~~~~
 
 ## <span style="color:blue;"> 5-Modificaciones realizadas(Formularios).</span>
+
 - Se han modificado los **index** de cada pagina web.
 - Añadido imagenes a la carpeta **media** y **/media/readme**.
 - Añadir la pagina **forumlarios** a la carpeta pages.
-- Se añadio un apartado al **CSS** que modifica el banner de la pagina formularios 
+- Se añadio un apartado al **CSS** que modifica el banner de la pagina formularios  
 - Se ha añadido estilos a los formularios y se les ha hecho resposive.
 
-## <span style="color:blue;"> 6- Distribución de tareas.</span>
-| **Responsable** | **Tarea**                                                                                 | **Duración** |
+## <span style="color:blue;"> 6- Modificaciones realizadas (JavaScript).</span>
+- Se han modificado el contenido de **HTML**, el **CSS**
+- Tambien se ha añadido un archivo **JavaScript** que añade las siguientes funciones:
+
+
+### <span style="color:blue;"> Funciones.</span>
+**Filtro de contenido.** esta función se encarga de filtrar las cartas que hay que cargar en la página, para ello se basa en un campo input, en el que el usuario eligirá la rareza de las cartas que quiere ver.  
+
+ ![Captura de filtro](./media/readme/filtros.png)
+
+ Muestra:
+
+ ![Captura de filtro GUI](./media/readme/filtros-gui.png)
+
+
+Para ello hacemos uso de objetos que contienen toda la información de las cartas.
+ ![Captura de objetos](./media/readme/objetos.png)
+
+----------
+
+
+**Ampliar imagenes.** Esta función se encarga de ampliar la imagen a la que hemos hecho click, para ello utiliza los datos pasados por parámetro desde el main.
+
+ ![Captura de zoom](./media/readme/zoom.png)
+
+  Muestra:
+
+ ![Captura de zoom GUI](./media/readme/zoom-gui.png)
+
+----------
+
+**Selector de imagenes.** Esta función se encarga de cargar las imagenes del sobre correspondiente al cuál has hecho click. Utilizamos el parámetro pasado a la función desde el main para saber a que sobre han hecho click.  
+
+ ![Captura de selector](./media/readme/selector.png)
+
+   Muestra:
+
+ ![Captura de selector GUI](./media/readme/selector-gui.png)
+
+----------
+
+**Añadir comentarios.** Esta función se encarga de guardar los comentarios puestos en los inputs del formulario y añadirlos a la lista que utilizará la función de cargar comentario para mostrarla por pantalla. Tiene añadido una comprobación de los datos mediante una expresión regular.
+
+ ![Captura de añadir comentarios](./media/readme/añadirComentarios.png)
+
+    Muestra:
+
+ ![Captura de añadir comentario GUI](./media/readme/añadirComentarios-gui.png)
+
+
+**Actualizar comentarios.** Esta función se encarga de leer todos los elementos de la lista pasada por parámetro y crear etiquetas "p" dentro de la lista.  
+
+ ![Captura de actualizar comentarios](./media/readme/actualizarComentarios.png)
+
+    Muestra:
+
+ ![Captura de actualizar comentarios GUI](./media/readme/actualizarComentarios-gui.png)
+
+----------
+
+**Slider de imagenes.** Esta función se encarga de ir deslizando las imagenes para generar un slider. 
+
+ ![Captura de slider](./media/readme/slider.png)
+
+     Muestra:
+
+ ![Captura de slider GUI](./media/readme/slider-gui.png)
+
+----------
+
+### <span style="color:blue;"> Main.</span>
+
+En el main está la parte donde se llaman a las demás funciones. Iremos explicandolo poco a poco. 
+
+**LLamada a diversas funciones simples.** En esta parte llamamos a funciones que simplemente hay que llamarlas como pueden ser slider() y cargarCartas(). Pero también tenemos la función del filtro. La cuál añadimos un evento al input para que cada vez que este se cambie llame a la función.  
+
+ ![Captura del main](./media/readme/main.png)
+
+----------
+
+**Llamada a la funciones de Zoom y Selector** En esta parte llamamos a la funciones de zoom y selector. Para ello añado un evento a cada una de las cartas con .ForEach (las imagenes de sobres para seleccionar contenido también son considerados y tratados como si fueran cartas). 
+
+Una vez establecido el evento, con closest() miramos si la carta clickada tiene como padre un elemento con la clase .selectorSobres, en caso afirmativo quiere decir que estamos hablando de un sobre y no una carta. Por tanto este se utilizará para decidir que cartas se mostrarán por pantalla. Una vez sabemos que este es un sobre, llamamos a la función y le pasamos por parámetro el alt del sobre para que luego la función pueda identificar cuál es. 
+
+En caso de haber clickado una carta (lo sabemos porque no tendrá un padre con clase .selectorSobres), llamamos a la función zoom y le pasamos los parámetros necesarios.
+
+ ![Captura del zoom selector](./media/readme/mainZoomSelector.png)
+
+----------
+
+**Gestón del nav** En esta parte simplemente añadimos un evento al icono de menú para poder desplegarlo en caso de estar en un teléfono o pantalla pequeña.
+
+ ![Captura del nav](./media/readme/mainNav.png)
+
+     Muestra:
+
+ ![Captura de nav GUI](./media/readme/mainNav-gui.png)
+
+    Muestra desplegado:
+
+ ![Captura de actualizar nav desplegado GUI](./media/readme/mainNav-gui2.png)
+
+----------
+
+**Modo claro / oscuro** En esta sección cambiamos los colores al hacer click sobre el icono de modo oscuro.
+
+ ![Captura del modo claro oscuro](./media/readme/mainClaroOscuro.png)
+
+    Muestra del botón para activar el modo oscuro:
+
+ ![Captura de actualizar comentarios GUI](./media/readme/mainClaroOscuro-gui.png)
+
+----------
+
+**Sombra del ratón** En este apartado solo se crea una sombra que sigue al ratón.
+
+ ![Captura de la sombra del cursor](./media/readme/mainCursor.png)
+
+----------
+
+**Comentarios** El primer bloque tiene la lista de comentarios y un evento en el botón submit que llama a las funciones de añadir comentarios y actualizarlos.
+
+El segundo bloque tiene el evento del botón para enseñar u ocultar la lista de comentarios. Esto se consigue teniendo 2 clases en css, una visible y otra no. Luego desde JavaScript simplemento las vamos alternando con el evento 'click'.
+
+ ![Captura de comentarios](./media/readme/mainComentarios.png)
+
+----------
+
+## <span style="color:blue;"> 7- Distribución de tareas.</span>
+
+
+| **Responsable**  | **Tarea**                                                                                 | **Duración** |
 |------------------|-------------------------------------------------------------------------------------------|--------------|
-<<<<<<< HEAD
-| **Cristian**     | Estructura base de todo el CSS y HTML que se usarán en las demás páginas 
-                    (Colores, forma de la página, secciones).                                                  | 3h           |
-=======
-| **Cristian**     | Estructura base de todo el CSS y HTML que se usarán en las demás páginas (Colores, forma de la página, secciones). | 3h       |
->>>>>>> origin/navMobile
+| **Cristian**     | Estructura base de todo el CSS y HTML que se usarán en las demás páginas (Colores, forma de la página, secciones).                                            | 4h           |
 |                  | Búsqueda de imágenes y contenido de la página (sobres).                                   | 1h           |
-|                  | Ordenar, limpiar y revisar código, añadir decoración al index.html.                       | 3h           |
+|                  | Ordenar, limpiar y revisar código, añadir decoración al index.html.                       | 4h           |
 |                  | Crear el footer y hacer la página index responsive.                                       | 2h           |
-|                  | Empezar la estructura de la página de sobres.                                             | 1h           |
-|                  | Acabar la estructura de la página de sobres.                                              | 2h           |
+|                  | Crear la estructura de la página de sobres.                                               | 4h           |
 |                  | Buscar imágenes y optimizar CSS.                                                          | 2h           |
 |                  | CSS Tabla.                                                                                | 1h           |
-|                  | Correccion de errores.                                                                    | 1h           |
-<<<<<<< HEAD
-|                  | CSS de la pagina web Formularios + validaciones.                                          | 2h           |
-=======
-|                  | CSS de la pagina web Formularios + validaciones.                                                                    | 2h           |
->>>>>>> origin/navMobile
+|                  | Correccion de errores.                                                                    | 2h           |
+|                  | CSS de la pagina web Formularios + validaciones.                                          | 4h           |
+|                  | Añadir función de carga de imágenes mediante objetos de js y adaptar el estilo (JS, HTML y CSS). | 6h           |
+|                  | Añadir función de filtros (JS).                                                           | 7h           |
+|                  | Añadir función de zoom en las cartas (JS).                                                | 1h           |
+|                  | Añadir función de selector sobres, adaptar también el HTML y CSS (JS, HTML, CSS).         | 2h           |
+|                  | Añadir función de comentarios (JS).                                                       | 2h           |
+|                  | Añadir validación de comentarios.                                                         | 2h           |
+|                  | Añadir Slider (JS, HTML, CSS).                                                            | 3h           |
+|                  | Añadir menú de navegación propia para móviles (JS, HTML, CSS).                            | 2h           |
+|                  | Arreglar el modo claro / oscuro (JS).                                                     | 1h           |
+|                  | Retoques generales de bugs y diseño.                                                      | 6h           |
+|                  | Modificar Readme.                                                                         | 2h           |
+|                  | Gestionar GitHub.                                                                         | 8h           |
+
+
+| **Responsable**  | **Tarea**                                                                                 | **Duración** |
+|------------------|-------------------------------------------------------------------------------------------|--------------|
+| **Ivan**         | Añadir información a los objetos (JS).                                                    | 1h           |
+|                  | Adaptar la carga de imágenes mediante js al HTML (HTML, CSS).                             | 2h           |
+|                  | Añadir función de ocultar/mostrar comentarios y arreglar css (CSS).                       | 2h           |
+|                  | Arreglar detalles del Slider (JS, HTML, CSS).                                             | 2h           |
+|                  | Modificar el CSS del menú de navegación para móviles (HMTL, CSS).                         | 1h           |
+|                  | Añadir sombra al cursor.                                                                  | 3h           |
+|                  | Arreglar error de colocación de sobres.                                                   | 1h           |
+|                  | Retoques generales de bugs y diseño.                                                      | 5h           |
+
 
 | **Responsable**  | **Tarea**                                                                                 | **Duración** |
 |------------------|-------------------------------------------------------------------------------------------|--------------|
@@ -141,14 +274,15 @@ Hemos adaptado la página para todas las resoluciones superiores a un ancho de 3
 |                  | Generar el texto de la página web info.                                                   | 30m          |
 |                  | Crear las páginas web (info).                                                             | 1h           |
 |                  | Creación del MARKDOWN.                                                                    | 2h           |
-<<<<<<< HEAD
 |                  | Creacion Pagina web(Formularios, sin las validaciones).                                   | 2h           |
 |                  | Modificación del README(Explicaciones de las expresiones, Imagenes,etc..).                | 1h           |
-=======
-|                  | Creacion Pagina web(Formularios, sin las validaciones).                                                                    | 2h           |
-|                  | Modificación del README(Explicaciones de las expresiones, Imagenes,etc..).                                                                    | 1h           |
->>>>>>> origin/navMobile
+|                  | HTML y css de la sección de comentarios (HTML, CSS).                                      | 3h           |
+|                  | Modo claro / oscura (JS) .                                                                | 3h           |
+|                  | Correcciones de algunos aspectos del modo claro oscuro.                                   | 2h           |
+|                  | Actualizazcion del README(JS).                                                            | 2h           |
+
 
 | **Responsables** | **Tarea**                                                                                 | **Duración** |
 |------------------|-------------------------------------------------------------------------------------------|--------------|
 | **Sven** y **Cristian**| Ultima revision de la pagina web.                                                   |  2h          |
+| **Sven** , **Cristian** y **Ivan**| Ultima revision de la pagina web(JS).                                    |  2h          |

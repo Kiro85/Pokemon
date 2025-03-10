@@ -210,6 +210,7 @@ nav#mobileMenu.active {
     margin: 5px ;
     width:40px; 
     height:40px;
+    cursor: pointer;
 }
 
 /* Estilo para la página del index */
@@ -330,6 +331,7 @@ main {
         max-width: 1200px;
         margin-top: 80px;
         gap: 30px 0;
+        cursor: pointer;
     
         .sobres_cartas {
             display: flex;
@@ -445,6 +447,7 @@ main {
     margin: 20px auto;
     background-color: #f9f9f9;
     box-shadow: 10px 10px 20px;
+    cursor: pointer;
 
     select {
         width: 100%;
@@ -636,6 +639,7 @@ form {
     width: 100%;
     border-radius: 8px;
     min-width: 100%;
+    cursor: pointer;
 }
 
 /* Estilos para la estructura de comentarios */
@@ -647,7 +651,7 @@ form {
 }
 
 .contenido_comentarios.active {
-    display: flex;
+    display: block;
 }
 
 .comentario {

@@ -57,7 +57,6 @@ const sobres = [
     { id: 'charizard', data: dataCartasCharizard }
 ];
 
-// -----------------FUNCIONES-----------------
 function cargarCartas() {
     if (document.getElementById('ordenar')) {
         let filtro = parseInt(document.getElementById('ordenar').value); // Convertimos a número el valor del filtro
@@ -296,7 +295,7 @@ buttonColor.addEventListener('click', () => {
     }
 });
 
-// -}---------------- Sombra del cursor -----------------
+// }---------------- Sombra del cursor -----------------
 
 body.addEventListener("mousemove", (e) => {
     shadow.style.transform = `translate(${e.pageX}px, ${e.pageY}px)`;
